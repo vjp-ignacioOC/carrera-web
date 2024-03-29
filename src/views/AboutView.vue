@@ -8,13 +8,13 @@
     </div>
   </template>
 
-<script >
+<script>
 export default {
   computed: {
     search() {
       return this.$route.query.search || "";
     },
-    
+
   }, 
   methods: {
     goToHome() {
@@ -22,5 +22,4 @@ export default {
     },
   },
 };
-
 </script>
