@@ -1,5 +1,5 @@
 <template>
-  <div class="main">
+  <div class="about">
     <h2>AboutView</h2>
     <label> Search: <input v-model.trim="search" maxlength="20" /> </label>
     <div class="botones">
@@ -32,17 +32,17 @@ export default {
     color: green;
   }
 
-  .main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 80vh;
-  }
-
   .botones {
     display: flex;
     justify-content: space-around;
     width: 100%;
   }
+
+  .about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
 </style>

@@ -1,7 +1,7 @@
 <!-- HTML de la vista -->
 <template>
 
-  <div class="main">
+  <div class="principal">
     <h1>Principal</h1>
     <div class="botones">
       <button @click="goToAbout">Go to About</button>
@@ -36,21 +36,21 @@ export default {
 <style scoped>
 
 h1 {
-  color: red;
-}
-
-.main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 80vh;
+  color: white;
 }
 
 .botones {
   display: flex;
   justify-content: space-around;
   width: 100%;
+}
+
+.principal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
 }
 
 </style>

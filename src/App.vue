@@ -1,7 +1,7 @@
 <template>
 
   <div>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mb-5">
       <RouterLink to="/" class="navbar-brand">Carrerita</RouterLink>
       <button
         class="navbar-toggler"
@@ -57,7 +57,7 @@
     </main>
 
 
-    <footer class="footer bg-light">
+    <footer class="footer bg-light mt-1">
       <div class="container">
         <p class="text-muted">Place sticky footer content here.</p>
       </div>
@@ -69,15 +69,28 @@
 
 <style>
 
+.navbar {
+  position: absolute;
+  width: 100%;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: brown;
+  min-height: 100%;
+}
+
 footer {
   padding: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  bottom: 0;
-  left: 0;
-  position: fixed;
+  position: absolute;
   width: 100%;
   height: 10vh;
+  
 }
 </style>
