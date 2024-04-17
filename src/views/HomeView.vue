@@ -1,8 +1,10 @@
 <template>
-  <div>
+  <div class="main">
     <h2>HomeView</h2>
-    <button @click="goToAbout">Go to About</button>
-    <button @click="goToPrincipal">Go to Principal</button>
+    <div class="botones">
+      <button @click="goToAbout">Go to About</button>
+      <button @click="goToPrincipal">Go to Principal</button>
+    </div>
 
   </div>
 </template>
@@ -25,3 +27,24 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+  h2 {
+    color: blue;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+  }
+
+  .botones {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+</style>
