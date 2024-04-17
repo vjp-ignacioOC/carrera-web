@@ -1,59 +1,75 @@
 <template>
+
   <div>
-    <nav>
-      <h1>Hello App!</h1>
-      <p><strong>Current route path:</strong> {{ $route.fullPath }}</p>
-      <RouterLink to="/">Go to Home</RouterLink>
-      <RouterLink to="/about">Go to About</RouterLink>
-      <Router-link to="/principal">Go to Principal</router-link>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <RouterLink to="/" class="navbar-brand">Carrerita</RouterLink>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <RouterLink to="/" class="nav-link">Home</RouterLink>
+          </li>
+          <li class="nav-item">
+            <RouterLink to="/about" class="nav-link">Go to About</RouterLink>
+          </li>
+          <li class="nav-item">
+            <Router-link to="/principal" class="nav-link">Go to Principal</Router-link>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Conéctate
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Iniciar Sesión</a>
+              <a class="dropdown-item" href="#">Registrarse</a>
+              <div class="dropdown-divider"></div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+        </ul>
+      </div>
     </nav>
+
+
     <main>
       <RouterView />
     </main>
-    <footer>
-      <p>Footer</p>
+
+
+    <footer class="footer bg-light">
+      <div class="container">
+        <p class="text-muted">Place sticky footer content here.</p>
+      </div>
     </footer>
   </div>
+
 </template>
 
 
 <style>
-  nav {
-  background-color: #333;
-  color: white;
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  height: 10vh;
-  top: 0;
-  left: 0;
-}
-
-nav h1 {
-  margin: 0;
-}
-
-nav p {
-  margin: 0;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  margin-left: 10px;
-}
-
-nav a:hover {
-  text-decoration: underline;
-  color: white;
-}
-
 
 footer {
-  background-color: #333;
-  color: white;
   padding: 10px;
   display: flex;
   justify-content: center;
@@ -64,5 +80,4 @@ footer {
   width: 100%;
   height: 10vh;
 }
-
 </style>

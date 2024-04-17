@@ -1,3 +1,4 @@
+<!-- HTML de la vista -->
 <template>
 
   <div class="main">
@@ -10,6 +11,8 @@
   
 </template>
 
+
+<!-- Funcionalidad, con JavaScript, de la vista -->
 <script>
 export default {
   computed: {
@@ -28,6 +31,8 @@ export default {
 };
 </script>
 
+
+<!-- Estilos de CSS para la vista -->
 <style scoped>
 
 h1 {
