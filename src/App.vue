@@ -68,7 +68,7 @@
           <li><a href="#">Contact</a></li>
         </ul>
         <p class="text-center">
-          Copyright @2017 | Designed With by <a href="https://iesvallejertepla.educarex.es/" target="_blank" class="text-muted">IES Valle Del Jerte</a>
+          Copyright 	&copy;2024 | Designed With by <a href="https://iesvallejertepla.educarex.es/" target="_blank" class="text-muted">IES Valle Del Jerte</a>
         </p>
 
         <ul class="social_footer_ul">
