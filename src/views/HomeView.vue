@@ -9,17 +9,17 @@
         data-ride="carousel"
       >
         <div class="carousel-inner">
-          <div class="carousel-item active">
+          <div class="carousel-item active mt-5">
             <img class="d-block" src="./../assets/logo.png" alt="First slide" />
           </div>
-          <div class="carousel-item">
+          <div class="carousel-item mt-5">
             <img
               class="d-block"
               src="./../assets/logo.png"
               alt="Second slide"
             />
           </div>
-          <div class="carousel-item">
+          <div class="carousel-item mt-5">
             <img class="d-block" src="./../assets/logo.png" alt="Third slide" />
           </div>
         </div>
@@ -158,6 +158,7 @@ export default {
   },
 };
 </script>
+
 
 <style scoped>
 /*Imagen del slide orientada en el centro */

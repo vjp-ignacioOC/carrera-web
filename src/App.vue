@@ -1,4 +1,5 @@
 <template>
+
   <div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light mb-5">
       <RouterLink to="/" class="navbar-brand">Carrerita</RouterLink>
@@ -24,8 +25,7 @@
           </li>
           <li class="nav-item">
             <Router-link to="/principal" class="nav-link"
-              >Go to Principal</Router-link
-            >
+              >Go to Principal</Router-link>
           </li>
           <li class="nav-item dropdown">
             <a
@@ -40,9 +40,10 @@
               Conéctate
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Iniciar Sesión</a>
-              <a class="dropdown-item" href="#">Registrarse</a>
+              <Router-link to="/login" class="dropdown-item"
+              >Iniciar Sesión</Router-link>
               <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Registrarse</a>
             </div>
           </li>
           <li class="nav-item">
@@ -86,10 +87,12 @@
       </div>
     </footer>
   </div>
+  
 </template>
 
 
 <style>
+
 .navbar {
   position: absolute;
   width: 100%;
@@ -104,20 +107,17 @@ main {
   min-height: 100%;
 }
 
-
 footer {
   width: 100%;
   background-color: #263238;
   padding: 10px 0px 25px 0px;
 }
-
 footer p {
   font-size: 13px;
   color: #ccc;
   padding-bottom: 0px;
   margin-bottom: 8px;
 }
-
 .foote_bottom_ul_amrc {
   list-style-type: none;
   padding: 0px;
@@ -133,7 +133,6 @@ footer p {
   color: #999;
   margin: 0 12px;
 }
-
 .social_footer_ul {
   display: table;
   margin: 15px auto 0 auto;
@@ -155,4 +154,5 @@ footer p {
   height: 20px;
   text-align: center;
 }
+
 </style>
