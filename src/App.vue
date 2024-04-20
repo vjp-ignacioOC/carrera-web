@@ -1,7 +1,7 @@
 <template>
 
   <div>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light mb-5">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <RouterLink to="/" class="navbar-brand">Carrerita</RouterLink>
       <button
         class="navbar-toggler"
@@ -43,7 +43,8 @@
               <Router-link to="/login" class="dropdown-item"
               >Iniciar Sesión</Router-link>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Registrarse</a>
+              <Router-link to="/registro" class="dropdown-item"
+              >Registrarse</Router-link>
             </div>
           </li>
           <li class="nav-item">
@@ -94,7 +95,7 @@
 <style>
 
 .navbar {
-  position: absolute;
+  position: relative;
   width: 100%;
 }
 
@@ -104,7 +105,7 @@ main {
   align-items: center;
   justify-content: center;
   background-color: lightcoral;
-  min-height: 100%;
+  min-height: 100vh;
 }
 
 footer {
