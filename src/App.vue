@@ -91,6 +91,24 @@
   
 </template>
 
+<script>
+import {auth} from './utils/firebase'
+
+export default {
+  name: "App",
+  setup() {
+    auth.onAuthStateChanged((user) => {
+      if (user) {
+        console.log('Usuario logueado')
+      } else {
+        console.log('Usuario no logueado')
+      }
+    })
+  }
+};
+
+</script>
+
 
 <style>
 
