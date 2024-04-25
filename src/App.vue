@@ -92,7 +92,7 @@
 </template>
 
 <script>
-import {auth} from './utils/firebase'
+import {auth} from './firebase'
 
 export default {
   name: "App",
