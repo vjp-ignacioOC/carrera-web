@@ -16,9 +16,6 @@
           <li class="nav-item">
             <RouterLink to="/about" class="nav-link">Entrenamientos</RouterLink>
           </li>
-          <li class="nav-item">
-            <Router-link to="/principal" class="nav-link">Go to Principal</Router-link>
-          </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false">
@@ -31,7 +28,7 @@
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
+            <Router-link to="/perfil" class="nav-link">Mi Perfil</Router-link>
           </li>
         </ul>
       </div>

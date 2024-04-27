@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <h2>AboutView</h2>
+    <h2>Entrenamientos para estar listo</h2>
     <label> Search: <input v-model.trim="search" maxlength="20" /> </label>
     <div class="botones">
       <button @click="goToHome">Go to Home</button>

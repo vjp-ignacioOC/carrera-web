@@ -2,33 +2,53 @@
   <div class="form-container">
     <form>
       <div class="form-group">
-        <label for="exampleInputEmail1">Introduzca su Email</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+        <label for="InputEmail">Introduzca su Email</label>
+        <input type="email" v-model="email" class="form-control" id="InputEmail" aria-describedby="emailHelp"
           placeholder="Email">
       </div>
       <div class="form-group">
-        <label for="exampleInputPassword1">Contraseña</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Contraseña">
-        <small id="emailHelp" class="form-text text-muted">No comparta su contraseña con nadie.</small>
+        <label for="InputPassword">Contraseña</label>
+        <input type="password" v-model="password" class="form-control" id="InputPassword" placeholder="Contraseña">
       </div>
-      <button type="submit" class="btn btn-primary">Acceder</button>
+
+      <button  @click="iniciarSesion" class="btn btn-primary">Acceder</button>
     </form>
   </div>
 </template>
 
 <script>
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import { auth } from '../firebase';
 export default {
+  data() {
+    return {
+      email: '',
+      password: '',
+    };
+  },
   computed: {
     $route() {
       return this.$route.fullPath;
     },
   },
   methods: {
-    goToAbout() {
-      this.$router.push("/about");
-    },
-    goToPrincipal() {
-      this.$router.push("/principal");
+    iniciarSesion() {
+      signInWithEmailAndPassword(auth, this.email, this.password)
+        .then((userCredential) => {
+          // Inicias sesión con las credenciales válidas del usuario
+          const user = userCredential.user;
+          console.log(user);
+          if (user) {
+            this.$router.push('/');
+          }
+        })
+        .catch((error) => {
+          alert('Usuario o contraseña incorrectos');
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          console.log(errorCode, errorMessage);
+
+        });
     },
   },
 };
