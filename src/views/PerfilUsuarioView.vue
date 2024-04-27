@@ -7,7 +7,7 @@
         <p>Si quiere restablecer su contraseña <span id="resetPassword" class="text-primary" @click="recuperarContraseña">Pulse aquí</span></p>
     </div> 
     <div class="botones">
-      <button @click="desconectarPerfil">Desconectar</button>
+      <v-btn @click="desconectarPerfil">Desconectar</v-btn>
     </div>
   </div>
   

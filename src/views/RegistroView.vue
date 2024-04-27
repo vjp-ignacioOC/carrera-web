@@ -16,7 +16,7 @@
           placeholder="Confirmar Contraseña">
         <small id="emailHelp" class="form-text text-muted">No comparta su contraseña con nadie.</small>
       </div>
-      <button @click="crearUsuario" class="btn btn-primary">Registrar</button>
+      <v-btn @click="crearUsuario" class="btn btn-primary">Registrar</v-btn>
     </form>
   </div>
 </template>

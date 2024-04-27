@@ -11,7 +11,7 @@
         <input type="password" v-model="password" class="form-control" id="InputPassword" placeholder="Contraseña">
       </div>
 
-      <button  @click="iniciarSesion" class="btn btn-primary">Acceder</button>
+      <v-btn @click="iniciarSesion" class="btn btn-primary">Acceder</v-btn>
     </form>
   </div>
 </template>
@@ -37,7 +37,7 @@ export default {
       .then((userCredential) => {
         // La autenticación fue exitosa
         console.log('Autenticación exitosa:', userCredential.user);
-        // this.$router.push('/');  // Redirigir a la página principal
+        this.$router.push('/');  // Redirigir a la página principal
       })
       .catch((error) => {
         console.log('Intentando iniciar sesión con:', this.email, this.password);
