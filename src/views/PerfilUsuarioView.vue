@@ -4,7 +4,7 @@
   <div class="principal">
     <h1>Perfil de Usuario</h1>
     <div class="cambiarContraseña">
-        <p id="emailHelp" class="form-text text-muted" @click="recuperarContraseña">Restablecer contraseña</p>
+        <p>Si quiere restablecer su contraseña <span id="resetPassword" class="text-primary" @click="recuperarContraseña">Pulse aquí</span></p>
     </div> 
     <div class="botones">
       <button @click="desconectarPerfil">Desconectar</button>
@@ -78,6 +78,10 @@ h1 {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+}
+
+#resetPassword {
+  cursor: pointer;
 }
 
 </style>

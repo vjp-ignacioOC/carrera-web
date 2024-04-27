@@ -34,21 +34,17 @@ export default {
   methods: {
     iniciarSesion() {
       signInWithEmailAndPassword(auth, this.email, this.password)
-        .then((userCredential) => {
-          // Inicias sesión con las credenciales válidas del usuario
-          const user = userCredential.user;
-          console.log(user);
-          if (user) {
-            this.$router.push('/');
-          }
-        })
-        .catch((error) => {
-          alert('Usuario o contraseña incorrectos');
-          const errorCode = error.code;
-          const errorMessage = error.message;
-          console.log(errorCode, errorMessage);
-
-        });
+      .then((userCredential) => {
+        // La autenticación fue exitosa
+        console.log('Autenticación exitosa:', userCredential.user);
+        // this.$router.push('/');  // Redirigir a la página principal
+      })
+      .catch((error) => {
+        console.log('Intentando iniciar sesión con:', this.email, this.password);
+        console.error('Error en la autenticación:', error);
+        alert('Usuario o contraseña incorrectos ' + error.code + ' ' + error.message);
+      });
+  
     },
   },
 };

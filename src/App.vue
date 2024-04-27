@@ -16,7 +16,10 @@
           <li class="nav-item">
             <RouterLink to="/about" class="nav-link">Entrenamientos</RouterLink>
           </li>
-          <li class="nav-item dropdown">
+          <li class="nav-item" v-if="conectado">
+            <Router-link to="/perfil" class="nav-link">Mi Perfil</Router-link>
+          </li>
+          <li class="nav-item dropdown" v-else>
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false">
               Conéctate
@@ -26,9 +29,6 @@
               <div class="dropdown-divider"></div>
               <Router-link to="/registro" class="dropdown-item">Registrarse</Router-link>
             </div>
-          </li>
-          <li class="nav-item">
-            <Router-link to="/perfil" class="nav-link">Mi Perfil</Router-link>
           </li>
         </ul>
       </div>
@@ -72,17 +72,21 @@
 
 <script>
 import { auth } from './firebase'
+import { ref, onMounted } from 'vue'
 
 export default {
   name: "App",
   setup() {
-    auth.onAuthStateChanged((user) => {
-      if (user) {
-        console.log('Usuario logueado')
-      } else {
-        console.log('Usuario no logueado')
-      }
-    })
+    const conectado = ref(false);
+
+    onMounted(() => {
+      auth.onAuthStateChanged(user => {
+        conectado.value = !!user;
+        console.log(user ? 'Usuario conectado' : 'Usuario desconectado');
+      });
+    });
+
+    return { conectado };
   }
 };
 
