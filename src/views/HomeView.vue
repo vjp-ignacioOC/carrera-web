@@ -43,10 +43,6 @@
         </a>
       </div>
     </div>
-    <!-- <div class="botones">
-      <button @click="goToAbout">Go to About</button>
-      <button @click="goToPrincipal">Go to Principal</button>
-    </div> -->
     <div class="contenido mb-5 px-5">
       <div class="loermi">
         <!-- En este div estará todo el contenido de la página principal sobre la carrera, con información, la ruta y más detalles -->
