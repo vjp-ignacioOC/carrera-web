@@ -3,8 +3,15 @@
     <form ref="registrarUsuario">
       <div class="form-group">
         <label for="registerEmail">Email</label>
-        <input type="email" v-model="email" class="form-control" id="registerEmail" placeholder="Email"
-          :rules="[rules.required]">
+        <input type="email" v-model="email" class="form-control" id="registerEmail" placeholder="Email">
+      </div>
+      <div class="form-group">
+        <label for="registerNombre">Nombre</label>
+        <input type="text" v-model="nombre" class="form-control" id="registerNombre" placeholder="Nombre">
+      </div>
+      <div class="form-group">
+        <label for="registerApellidos">Apellidos</label>
+        <input type="text" v-model="apellidos" class="form-control" id="registerApellidos" placeholder="Apellidos">
       </div>
       <div class="form-group">
         <label for="registerPassword">Contraseña</label>
@@ -25,14 +32,18 @@
 // import firebase from 'firebase/app';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../firebase';
+import { db } from '../firebase';
+import { doc, setDoc } from 'firebase/firestore';
 
 export default {
   data() {
     return {
       nombre: '',
+      apellidos: '',
       email: '',
       password: '',
       confirmPassword: '',
+      imageUrl: '',
       rules: {
         required: (value) => !!value || 'Este campo es requerido',
         email: (value) => {
@@ -60,7 +71,7 @@ export default {
     },
   },
   methods: {
-    crearUsuario() {
+    async crearUsuario() {
       if (this.password !== this.confirmPassword) {
         alert('Las contraseñas no coinciden.');
         return;
@@ -69,16 +80,23 @@ export default {
         alert('La contraseña debe tener al menos 6 caracteres');
         return;
       }
-
-      createUserWithEmailAndPassword(auth, this.email, this.password)
-        .then(() => {
-          this.$router.push('/login');
-          console.log('Usuario creado');
-        })
-        .catch((error) => {
-          console.error(error);
+      try {
+        const userCredential = await createUserWithEmailAndPassword(auth, this.email, this.password);
+        const user = userCredential.user;
+        console.log('Usuario creado:', user.uid); // UID del usuario para usarlo como referencia en Firestore
+        
+        // Aquí guardas la información adicional en Firestore
+        await setDoc(doc(db, "users", user.uid), {
+          nombre: this.nombre,
+          apellidos: this.apellidos,
+          imageUrl: this.imageUrl,
         });
 
+        this.$router.push('/login');
+      } catch (error) {
+        console.error('Error al crear el usuario:', error);
+        alert(`Error al crear el usuario: ${error.message}`);
+      }
     },
   },
 };
