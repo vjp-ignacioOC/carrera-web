@@ -146,7 +146,7 @@ export default {
   },
   methods: {
     goToAbout() {
-      this.$router.push("/about");
+      this.$router.push("/entrenamientos");
     },
     goToPrincipal() {
       this.$router.push("/principal");

@@ -9,32 +9,37 @@
 
     <div class="row">
       <!-- Muestra la foto de perfil del usuario -->
-    <div class="col-6">
-      <img :src="imagenUrl" alt="Foto de perfil" width="200vw">
-    </div>
+      <div class="col-4">
+        <img :src="imagenUrl" alt="Foto de perfil" width="200vw">
+      </div>
+      <div class="col-4"></div>
       <!-- Muestra los datos del usuario logueado -->
-      <div class="col-6">
+      <div class="col-4">
         <p>Nombre: {{ nombre }}</p>
         <p>Apellidos: {{ apellidos }}</p>
         <p>Email: {{ email }}</p>
       </div>
+    </div>
+
+    <div class="row">
       <div class="cambiarContraseña col-12">
         <p>Si quiere restablecer su contraseña <span id="resetPassword" class="text-primary"
             @click="recuperarContrasenia">Pulse aquí</span></p>
       </div>
     </div>
 
-    <div class="botones">
-      <v-btn @click="desconectarPerfil" class="btn btn-danger">Desconectar</v-btn>
-    </div>
-    <div>
-      <h3>Subir imagen de perfil</h3>
-      <input type="file" @change="seleccionarFoto" id="fileInput">
-      <br>
-      <v-btn @click="subirFoto" class="btn btn-primary">Subir Archivo</v-btn>
+    <div class="row">
+      <div class="col-6">
+        <h3>Subir una imagen de perfil</h3>
+        <input type="file" @change="seleccionarFoto" id="fileInput">
+        <v-btn @click="subirFoto" class="btn btn-primary">Subir Archivo</v-btn>
+      </div>
+      <div class="botones col-6">
+        <v-btn @click="desconectarPerfil" class="btn btn-danger">Desconectar</v-btn>
+      </div>
     </div>
 
-    
+
   </div>
 
 </template>
@@ -153,6 +158,7 @@ h1 {
   justify-content: space-around;
   width: 100%;
   cursor: pointer;
+  height: 7vh;
 }
 
 .principal {

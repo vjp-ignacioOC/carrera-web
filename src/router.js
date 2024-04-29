@@ -1,14 +1,14 @@
 import { createMemoryHistory, createRouter } from 'vue-router'
 
 import HomeView from '@/views/HomeView.vue'
-import AboutView from '@/views/AboutView.vue'
 import LoginView from '@/views/LoginView.vue'
 import RegistroView from '@/views/RegistroView.vue'
 import PerfilUsuarioView from './views/PerfilUsuarioView.vue'
+import EntrenamientosView from '@/views/EntrenamientosView.vue'
 
 const routes = [
   { path: '/', component: HomeView },
-  { path: '/about', component: AboutView },
+  { path: '/entrenamientos', component: EntrenamientosView },
   { path: '/perfil', component: PerfilUsuarioView },
   { path: '/login', component: LoginView },
   { path: '/registro', component: RegistroView },

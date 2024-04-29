@@ -14,7 +14,7 @@
             <RouterLink to="/" class="nav-link">Inicio</RouterLink>
           </li>
           <li class="nav-item">
-            <RouterLink to="/about" class="nav-link">Entrenamientos</RouterLink>
+            <RouterLink to="/entrenamientos" class="nav-link">Entrenamientos</RouterLink>
           </li>
           <li class="nav-item" v-if="conectado">
             <Router-link to="/perfil" class="nav-link">Mi Perfil</Router-link>
