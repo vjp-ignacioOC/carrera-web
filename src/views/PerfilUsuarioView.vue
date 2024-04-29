@@ -1,30 +1,40 @@
 <!-- HTML de la vista -->
 <template>
 
-  <div class="principal">
-    <h1>Perfil de Usuario</h1>
-    <div class="cambiarContraseña">
-      <p>Si quiere restablecer su contraseña <span id="resetPassword" class="text-primary"
-          @click="recuperarContrasenia">Pulse aquí</span></p>
+  <div class="container principal">
+
+    <div class="row">
+      <h1 class="col-12">Perfil de {{ nombre }}</h1>
     </div>
+
+    <div class="row">
+      <!-- Muestra la foto de perfil del usuario -->
+    <div class="col-6">
+      <img :src="imagenUrl" alt="Foto de perfil" width="200vw">
+    </div>
+      <!-- Muestra los datos del usuario logueado -->
+      <div class="col-6">
+        <p>Nombre: {{ nombre }}</p>
+        <p>Apellidos: {{ apellidos }}</p>
+        <p>Email: {{ email }}</p>
+      </div>
+      <div class="cambiarContraseña col-12">
+        <p>Si quiere restablecer su contraseña <span id="resetPassword" class="text-primary"
+            @click="recuperarContrasenia">Pulse aquí</span></p>
+      </div>
+    </div>
+
     <div class="botones">
-      <v-btn @click="desconectarPerfil">Desconectar</v-btn>
+      <v-btn @click="desconectarPerfil" class="btn btn-danger">Desconectar</v-btn>
     </div>
     <div>
-      <h1>Subir imagen de perfil</h1>
+      <h3>Subir imagen de perfil</h3>
       <input type="file" @change="seleccionarFoto" id="fileInput">
-      <v-btn @click="subirFoto">Subir Archivo</v-btn>
+      <br>
+      <v-btn @click="subirFoto" class="btn btn-primary">Subir Archivo</v-btn>
     </div>
-    <!-- Muestra los datos del usuario logueado -->
-    <div>
-      <p>Nombre: {{ nombre }}</p>
-      <p>Apellidos: {{ apellidos }}</p>
-      <p>Email: {{ email }}</p>
-    </div>
-    <!-- Muestra la foto de perfil del usuario -->
-    <div>
-      <img :src="imagenUrl" alt="Foto de perfil" width="100px">
-    </div>
+
+    
   </div>
 
 </template>
@@ -94,7 +104,7 @@ export default {
         }
       }
     },
-    
+
     seleccionarFoto(event) {
       this.file = event.target.files[0]; // Toma el primer archivo seleccionado
     },
@@ -126,8 +136,8 @@ export default {
     }
   },
   mounted() {
-      this.cargarDatosUsuario().catch(error => console.error('Error al cargar datos del usuario:', error));
-    },
+    this.cargarDatosUsuario().catch(error => console.error('Error al cargar datos del usuario:', error));
+  },
 };
 </script>
 

@@ -44,25 +44,25 @@ export default {
       password: '',
       confirmPassword: '',
       imageUrl: '',
-      rules: {
-        required: (value) => !!value || 'Este campo es requerido',
-        email: (value) => {
-          const validarEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-          return validarEmail.test(value) || 'El email no es válido';
-        },
-        password: (value) => {
-          if (value.length < 6) {
-            return 'La contraseña debe tener al menos 6 caracteres';
-          }
-          return true;
-        },
-        confirmPassword: (value) => {
-          if (value !== this.password) {
-            return 'Las contraseñas no coinciden';
-          }
-          return true;
-        },
-      },
+      // rules: {
+      //   required: (value) => !!value || 'Este campo es requerido',
+      //   email: (value) => {
+      //     const validarEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      //     return validarEmail.test(value) || 'El email no es válido';
+      //   },
+      //   password: (value) => {
+      //     if (value.length < 6) {
+      //       return 'La contraseña debe tener al menos 6 caracteres';
+      //     }
+      //     return true;
+      //   },
+      //   confirmPassword: (value) => {
+      //     if (value !== this.password) {
+      //       return 'Las contraseñas no coinciden';
+      //     }
+      //     return true;
+      //   },
+      // },
     };
   },
   computed: {
