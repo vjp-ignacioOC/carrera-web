@@ -14,7 +14,10 @@
             <RouterLink to="/" class="nav-link">Inicio</RouterLink>
           </li>
           <li class="nav-item">
-            <RouterLink to="/entrenamientos" class="nav-link">Entrenamientos</RouterLink>
+            <RouterLink to="/entrenamientos" class="nav-link">Información básica</RouterLink>
+          </li>
+          <li class="nav-item">
+            <RouterLink to="/patrocinadores" class="nav-link">Patrocinadores</RouterLink>
           </li>
           <li class="nav-item" v-if="conectado">
             <Router-link to="/perfil" class="nav-link">Mi Perfil</Router-link>
@@ -44,7 +47,7 @@
           <li><a href="#">Home</a></li>
           <li><a href="#">About</a></li>
           <li><a href="#">Services</a></li>
-          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Reglamento</a></li>
           <li><a href="#">Blog</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
@@ -94,6 +97,10 @@ export default {
 
 
 <style>
+html {
+  scroll-behavior: smooth;
+}
+
 .navbar {
   position: relative;
   width: 100%;
