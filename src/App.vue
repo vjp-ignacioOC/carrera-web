@@ -44,12 +44,10 @@
     <footer class="footer bg-light mt-1">
       <div class="container">
         <ul class="foote_bottom_ul_amrc">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
+          <li><RouterLink to="/">Inicio</RouterLink></li>
+          <li><RouterLink to="/entrenamientos">Info</RouterLink></li>
+          <li><RouterLink to="/patrocinadores">Patrocinadores</RouterLink></li>
           <li><a href="#">Reglamento</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Contact</a></li>
         </ul>
         <p class="text-center">
           Copyright &copy;2024 | Designed With by <a href="https://iesvallejertepla.educarex.es/" target="_blank"
@@ -76,6 +74,7 @@
 <script>
 import { auth } from './firebase'
 import { ref, onMounted } from 'vue'
+import router from './router'
 
 export default {
   name: "App",
@@ -88,6 +87,11 @@ export default {
         console.log(user ? 'Usuario conectado' : 'Usuario desconectado');
       });
     });
+    // Ajustar el scroll de la página al cambiar de ruta
+    router.beforeEach((to, from, next) => {
+      window.scrollTo(0, 0); // Scroll hasta la parte superior de la página
+      next();
+    });
 
     return { conectado };
   }
@@ -96,14 +100,14 @@ export default {
 </script>
 
 
-<style>
+<style scoped>
 html {
   scroll-behavior: smooth;
 }
 
 .navbar {
   position: relative;
-  width: 100%;
+  width: 100vw;
 }
 
 main {
@@ -116,10 +120,11 @@ main {
 }
 
 footer {
-  width: 100%;
+  width: 100vw;
   background-color: #263238;
   padding: 10px 0px 25px 0px;
 }
+
 
 footer p {
   font-size: 13px;
@@ -134,13 +139,10 @@ footer p {
   display: flex;
   text-align: center;
   justify-content: center;
+  flex-wrap: wrap;
   margin-top: 10px;
   margin-right: auto;
   margin-left: auto;
-}
-
-.foote_bottom_ul_amrc li {
-  display: inline;
 }
 
 .foote_bottom_ul_amrc li a {
@@ -173,4 +175,5 @@ footer p {
   height: 20px;
   text-align: center;
 }
+
 </style>
