@@ -1,6 +1,6 @@
 <template>
   <div class="form-container">
-    <form>
+    <form class="formularioRegistro">
       <div class="form-group">
         <label for="InputEmail">Introduzca su Email</label>
         <input type="email" v-model="email" class="form-control" id="InputEmail" aria-describedby="emailHelp"
@@ -34,31 +34,39 @@ export default {
   methods: {
     iniciarSesion() {
       signInWithEmailAndPassword(auth, this.email, this.password)
-      .then((userCredential) => {
-        // La autenticación fue exitosa
-        console.log('Autenticación exitosa:', userCredential.user);
-        this.$router.push('/');  // Redirigir a la página principal
-      })
-      .catch((error) => {
-        console.log('Intentando iniciar sesión con:', this.email, this.password);
-        console.error('Error en la autenticación:', error);
-        alert('Usuario o contraseña incorrectos ' + error.code + ' ' + error.message);
-      });
-  
+        .then((userCredential) => {
+          // La autenticación fue exitosa
+          console.log('Autenticación exitosa:', userCredential.user);
+          this.$router.push('/');  // Redirigir a la página principal
+        })
+        .catch((error) => {
+          console.log('Intentando iniciar sesión con:', this.email, this.password);
+          console.error('Error en la autenticación:', error);
+          alert('Usuario o contraseña incorrectos ' + error.code + ' ' + error.message);
+        });
+
     },
   },
 };
 </script>
 
 <style scoped>
-  .form-container {
+
+.formularioRegistro {
   background: #ffffff;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 400px;
-  margin: auto; /* Centrado automático en el contenedor padre */
+  margin: auto;
+  /* Centrado horizontal */
+  position: relative;
+  /* Para centrado vertical */
+  top: 50%;
+  /* Para centrado vertical */
+  transform: translateY(50%);
+  /* Para centrado vertical */
 }
 
 .form-group {
@@ -87,7 +95,7 @@ input[type="password"] {
   color: #6c757d;
 }
 
-button.btn {
+.btn {
   width: 100%;
   padding: 10px;
   border: none;
@@ -98,7 +106,7 @@ button.btn {
   transition: background-color 0.3s;
 }
 
-button.btn:hover {
+.btn:hover {
   background-color: #0056b3;
 }
 </style>

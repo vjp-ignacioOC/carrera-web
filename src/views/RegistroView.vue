@@ -1,6 +1,6 @@
 <template>
   <div class="form-container">
-    <form ref="registrarUsuario">
+    <form ref="registrarUsuario" class="formularioRegistro">
       <div class="form-group">
         <label for="registerEmail">Email</label>
         <input type="email" v-model="email" class="form-control" id="registerEmail" placeholder="Email">
@@ -103,14 +103,26 @@ export default {
 </script>
 
 <style scoped>
-.form-container {
+
+.formularioRegistro {
   background: #ffffff;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 400px;
-  margin: 20px auto;
+  margin: auto;
+  /* Centrado horizontal */
+  position: relative;
+  /* Para centrado vertical */
+  top: 50%;
+  /* Para centrado vertical */
+  transform: translateY(-50%);
+  /* Para centrado vertical */
+}
+
+.form-container {
+  height: 100vh;
 }
 
 .form-group {
@@ -137,7 +149,14 @@ input[type="password"] {
   margin-left: 0.5rem;
 }
 
-button.btn {
+.form-text {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+  color: #6c757d;
+}
+
+.btn {
   width: 100%;
   padding: 10px;
   border: none;
@@ -148,7 +167,7 @@ button.btn {
   transition: background-color 0.3s;
 }
 
-button.btn:hover {
+.btn:hover {
   background-color: #0056b3;
 }
 </style>

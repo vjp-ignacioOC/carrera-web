@@ -9,37 +9,36 @@
 
     <div class="row">
       <!-- Muestra la foto de perfil del usuario -->
-      <div class="col-4">
-        <img :src="imagenUrl" alt="Foto de perfil" width="200vw">
+      <div class="col-md-4">
+        <img :src="imagenUrl" alt="Foto de perfil" class="fotoPerfil">
       </div>
-      <div class="col-4"></div>
       <!-- Muestra los datos del usuario logueado -->
-      <div class="col-4">
-        <p>Nombre: {{ nombre }}</p>
-        <p>Apellidos: {{ apellidos }}</p>
-        <p>Email: {{ email }}</p>
+      <div class="col-md-8">
+        <div class="datosUsuario">
+          <p>Nombre: {{ nombre }}</p>
+          <p>Apellidos: {{ apellidos }}</p>
+          <p>Email: {{ email }}</p>
+        </div>
       </div>
     </div>
 
     <div class="row">
-      <div class="cambiarContraseña col-12">
-        <p>Si quiere restablecer su contraseña <span id="resetPassword" class="text-primary"
-            @click="recuperarContrasenia">Pulse aquí</span></p>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-6">
+      <div class="col-md-6">
         <h3>Subir una imagen de perfil</h3>
         <input type="file" @change="seleccionarFoto" id="fileInput">
         <v-btn @click="subirFoto" class="btn btn-primary">Subir Archivo</v-btn>
       </div>
-      <div class="botones col-6">
+      <div class="col-md-6 botones">
         <v-btn @click="desconectarPerfil" class="btn btn-danger">Desconectar</v-btn>
       </div>
     </div>
 
-
+    <div class="row">
+      <div class="col-md-12 cambiarContraseña">
+        <p>Si quiere restablecer su contraseña <span id="resetPassword"
+            @click="recuperarContrasenia">Pulse aquí</span></p>
+      </div>
+    </div>
   </div>
 
 </template>
@@ -153,12 +152,27 @@ h1 {
   color: white;
 }
 
+.fotoPerfil {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+}
+
+.datosUsuario p {
+  margin: 5px 0;
+}
+
 .botones {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
+  align-items: center;
   width: 100%;
   cursor: pointer;
   height: 7vh;
+}
+
+.btn {
+  margin-right: 10px;
 }
 
 .principal {
@@ -166,10 +180,15 @@ h1 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  min-height: 80vh;
+}
+
+.cambiarContraseña {
+  margin-top: 20px;
 }
 
 #resetPassword {
   cursor: pointer;
+  color: blue;
 }
 </style>
