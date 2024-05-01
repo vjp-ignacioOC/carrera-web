@@ -7,10 +7,10 @@
       <h1 class="col-12">Perfil de {{ nombre }}</h1>
     </div>
 
-    <div class="row">
+    <div ref="perfil" class="row">
       <!-- Muestra la foto de perfil del usuario -->
       <div class="col-md-4">
-        <img :src="imagenUrl" alt="Foto de perfil" class="fotoPerfil">
+        <img :src="imagenUrl" alt="Foto de perfil" class="fotoPerfil" >
       </div>
       <!-- Muestra los datos del usuario logueado -->
       <div class="col-md-8">
@@ -30,13 +30,14 @@
       </div>
       <div class="col-md-6 botones">
         <v-btn @click="desconectarPerfil" class="btn btn-danger">Desconectar</v-btn>
+        <v-btn @click="descargarPDF" class="btn btn-primary">Descargar PDF</v-btn>
       </div>
     </div>
 
     <div class="row">
       <div class="col-md-12 cambiarContraseña">
-        <p>Si quiere restablecer su contraseña <span id="resetPassword"
-            @click="recuperarContrasenia">Pulse aquí</span></p>
+        <p>Si quiere restablecer su contraseña <span id="resetPassword" @click="recuperarContrasenia">Pulse aquí</span>
+        </p>
       </div>
     </div>
   </div>
@@ -51,6 +52,8 @@ import { auth, db, storage } from "../firebase";
 import { doc, getDoc } from "firebase/firestore";
 import { ref as storageRef, uploadBytes, getDownloadURL } from "firebase/storage";
 import { setDoc } from 'firebase/firestore';
+import { jsPDF } from "jspdf";
+import html2canvas from "html2canvas";
 
 
 export default {
@@ -108,10 +111,42 @@ export default {
         }
       }
     },
-
+    // Este método se dispara cuando el usuario selecciona un archivo. Si el archivo es JPG o JPEG, se llama a convertirAPng.
     seleccionarFoto(event) {
-      this.file = event.target.files[0]; // Toma el primer archivo seleccionado
-    },
+    this.file = event.target.files[0];
+    if (this.file && (this.file.type === 'image/jpeg' || this.file.type === 'image/jpg')) {
+      // Convertir a PNG si el archivo es JPEG/JPG
+      this.convertirAPng(this.file);
+    }
+  },
+  // Este método carga el archivo original como una imagen, dibuja esta imagen en un <canvas>, y luego utiliza toDataURL para obtener la imagen en formato PNG. Finalmente, se utiliza toBlob para convertir la URL de datos en un blob, que luego se convierte en un objeto File de PNG que se puede subir.
+  convertirAPng(file) {
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      const imgElement = document.createElement("img");
+      imgElement.src = e.target.result;
+      imgElement.onload = () => {
+        const canvas = document.createElement("canvas");
+        canvas.width = imgElement.width;
+        canvas.height = imgElement.height;
+        const ctx = canvas.getContext("2d");
+        ctx.drawImage(imgElement, 0, 0, canvas.width, canvas.height);
+        canvas.toDataURL('image/png'); // Convertir a PNG
+
+        canvas.toBlob((blob) => {
+          // Conserva el nombre original pero cambia la extensión a .png
+          const nombreOriginal = file.name.replace(/\.[^/.]+$/, "");
+          const nombreNuevo = `${nombreOriginal}.png`;
+          this.file = new File([blob], nombreNuevo, {
+            type: 'image/png',
+            lastModified: Date.now()
+          });
+          this.subirFoto(); // Subir después de la conversión
+        }, 'image/png');
+      };
+    };
+    reader.readAsDataURL(file);
+  },
     subirFoto() {
       if (!this.file) {
         alert('Por favor, selecciona un archivo primero.');
@@ -137,6 +172,23 @@ export default {
         console.error('Error al subir el archivo:', error);
         alert('Error al subir archivo: ' + error.message);
       });
+    },
+    // Descargar el perfil del usuario en formato PDF
+    descargarPDF() {
+      html2canvas(this.$refs.perfil, { scale: 2 }).then(canvas => {
+        const imgData = canvas.toDataURL('image/png');
+        const pdf = new jsPDF({
+          orientation: 'portrait',
+          unit: 'mm',
+          format: 'a4'
+        });
+        // Calcular el ancho y alto del PDF para mantener la relación de aspecto de la imagen
+        const pdfWidth = pdf.internal.pageSize.getWidth();
+        const pdfHeight = (canvas.height * pdfWidth) / canvas.width;
+
+        pdf.addImage(imgData, 'PNG', 10, 10, pdfWidth, pdfHeight);
+        pdf.save('perfil.pdf');
+      }).catch(error => console.error('Error al generar PDF:', error));
     }
   },
   mounted() {
