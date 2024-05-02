@@ -75,7 +75,7 @@ export default {
   /* Para centrado vertical */
   top: 50%;
   /* Para centrado vertical */
-  transform: translateY(50%);
+  transform: translateY(-50%);
   /* Para centrado vertical */
 }
 
