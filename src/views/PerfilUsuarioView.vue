@@ -122,9 +122,9 @@ export default {
   // Este método carga el archivo original como una imagen, dibuja esta imagen en un <canvas>, y luego utiliza toDataURL para obtener la imagen en formato PNG. Finalmente, se utiliza toBlob para convertir la URL de datos en un blob, que luego se convierte en un objeto File de PNG que se puede subir.
   convertirAPng(file) {
     const reader = new FileReader();
-    reader.onload = (e) => {
+    reader.onload = (event) => {
       const imgElement = document.createElement("img");
-      imgElement.src = e.target.result;
+      imgElement.src = event.target.result;
       imgElement.onload = () => {
         const canvas = document.createElement("canvas");
         canvas.width = imgElement.width;
@@ -178,15 +178,15 @@ export default {
       html2canvas(this.$refs.perfil, { scale: 2 }).then(canvas => {
         const imgData = canvas.toDataURL('image/png');
         const pdf = new jsPDF({
-          orientation: 'portrait',
-          unit: 'mm',
-          format: 'a4'
+          orientation: 'landscape',
+          unit: 'px',
+          format: 'a6'
         });
         // Calcular el ancho y alto del PDF para mantener la relación de aspecto de la imagen
         const pdfWidth = pdf.internal.pageSize.getWidth();
         const pdfHeight = (canvas.height * pdfWidth) / canvas.width;
 
-        pdf.addImage(imgData, 'PNG', 10, 10, pdfWidth, pdfHeight);
+        pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
         pdf.save('perfil.pdf');
       }).catch(error => console.error('Error al generar PDF:', error));
     }
