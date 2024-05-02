@@ -34,8 +34,18 @@ import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../firebase';
 import { db } from '../firebase';
 import { doc, setDoc } from 'firebase/firestore';
+import { createVuetify } from 'vuetify'
+import 'vuetify/styles'
+import { VBtn } from "vuetify/lib/components/index.mjs"; 
+
+const vuetify = createVuetify();
+
 
 export default {
+  vuetify, // Añadir Vuetify a la vista
+  components: {
+    VBtn
+  },
   data() {
     return {
       nombre: '',

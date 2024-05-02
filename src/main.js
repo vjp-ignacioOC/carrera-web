@@ -4,6 +4,7 @@ import router from './router'
 import { createVuetify } from 'vuetify'
 import 'vuetify/styles'
 
+const app = createApp(App);
 const vuetify = createVuetify();
 
-createApp(App).use(router).use(vuetify).mount('#app')
+app.use(router).use(vuetify).mount('#app')

@@ -30,7 +30,7 @@
       </div>
       <div class="col-md-6 botones">
         <v-btn @click="desconectarPerfil" class="btn btn-danger">Desconectar</v-btn>
-        <v-btn @click="descargarPDF" class="btn btn-primary">Descargar PDF</v-btn>
+        <v-btn @click="descargarPDF" class="btn btn-warning">Descargar PDF</v-btn>
       </div>
     </div>
 
@@ -54,9 +54,18 @@ import { ref as storageRef, uploadBytes, getDownloadURL } from "firebase/storage
 import { setDoc } from 'firebase/firestore';
 import { jsPDF } from "jspdf";
 import html2canvas from "html2canvas";
+import { createVuetify } from 'vuetify'
+import 'vuetify/styles'
+import { VBtn } from "vuetify/lib/components/index.mjs"; 
+
+const vuetify = createVuetify();
 
 
 export default {
+  vuetify, // Añadir Vuetify a la vista
+  components: {
+    VBtn
+  },
   data() {
     return {
       //Recoge el email del usuario logueado
