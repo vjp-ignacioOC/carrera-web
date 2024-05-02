@@ -66,12 +66,7 @@ export default {
     },
   },
   methods: {
-    goToHome() {
-      this.$router.push("/");
-    },
-    goToPrincipal() {
-      this.$router.push("/principal");
-    },
+
   },
 };
 </script>

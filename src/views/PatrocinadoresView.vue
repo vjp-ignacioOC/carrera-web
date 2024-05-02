@@ -67,6 +67,8 @@
 
 <script>
 
+// Meter música
+
 export default ({
     computed: {
         $route() {

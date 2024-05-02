@@ -2,7 +2,7 @@
 
   <div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <RouterLink to="/" class="navbar-brand">Carrerita</RouterLink>
+      <RouterLink to="/" class="navbar-brand">Corre Forr<span id="E">E</span><span id="X">X</span><span id="T">T</span></RouterLink>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -174,6 +174,17 @@ footer p {
   width: 20px;
   height: 20px;
   text-align: center;
+}
+
+#E {
+  color: green;
+}
+
+#X {
+  color: white;
+}
+#T {
+  color: black;
 }
 
 </style>

@@ -18,6 +18,7 @@
           <p>Nombre: {{ nombre }}</p>
           <p>Apellidos: {{ apellidos }}</p>
           <p>Email: {{ email }}</p>
+          <p>Número de Dorsal: {{ contadorDorsal }}</p>
         </div>
       </div>
     </div>
@@ -74,6 +75,7 @@ export default {
       apellidos: '',
       file: null,
       imagenUrl: '',
+      contadorDorsal: '',
     };
   },
   computed: {
@@ -115,6 +117,7 @@ export default {
           this.nombre = docSnap.data().nombre;
           this.apellidos = docSnap.data().apellidos;
           this.imagenUrl = docSnap.data().imageUrl;
+          this.contadorDorsal = docSnap.data().contadorDorsal;
         } else {
           console.log("No se encontraron datos del usuario.");
         }
