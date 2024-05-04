@@ -1,7 +1,7 @@
 <template>
 
   <div>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-grey">
       <RouterLink to="/" class="navbar-brand">Corre Forr<span id="E">E</span><span id="X">X</span><span id="T">T</span></RouterLink>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -10,11 +10,11 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
+          <li class="nav-item">
             <RouterLink to="/" class="nav-link">Inicio</RouterLink>
           </li>
           <li class="nav-item">
-            <RouterLink to="/entrenamientos" class="nav-link">Información básica</RouterLink>
+            <RouterLink to="/entrenamientos" class="nav-link">Información para Participantes</RouterLink>
           </li>
           <li class="nav-item">
             <RouterLink to="/patrocinadores" class="nav-link">Patrocinadores</RouterLink>
@@ -27,7 +27,7 @@
               aria-haspopup="true" aria-expanded="false">
               Conéctate
             </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <div class="dropdown-menu bg-grey" aria-labelledby="navbarDropdown">
               <Router-link to="/login" class="dropdown-item">Iniciar Sesión</Router-link>
               <div class="dropdown-divider"></div>
               <Router-link to="/registro" class="dropdown-item">Registrarse</Router-link>
@@ -41,7 +41,7 @@
       <RouterView />
     </main>
 
-    <footer class="footer bg-light mt-1">
+    <footer class="footer bg-grey mt-1">
       <div class="container">
         <ul class="foote_bottom_ul_amrc">
           <li><RouterLink to="/">Inicio</RouterLink></li>
@@ -51,7 +51,7 @@
         </ul>
         <p class="text-center">
           Copyright &copy;2024 | Designed With by <a href="https://iesvallejertepla.educarex.es/" target="_blank"
-            class="text-muted">IES Valle Del Jerte</a>
+            class="text-white">IES Valle Del Jerte</a>
         </p>
 
         <ul class="social_footer_ul">
@@ -103,32 +103,32 @@ export default {
 <style>
 html {
   scroll-behavior: smooth;
+  font-family: Arial, sans-serif;
+
 }
 
 .navbar {
   position: relative;
   width: 100vw;
-}
+  }
 
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: lightcoral;
   min-height: 100vh;
 }
 
 footer {
   width: 100vw;
-  background-color: #263238;
   padding: 10px 0px 25px 0px;
 }
 
 
 footer p {
   font-size: 13px;
-  color: #ccc;
+  color: black;
   padding-bottom: 0px;
   margin-bottom: 8px;
 }
@@ -146,7 +146,7 @@ footer p {
 }
 
 .foote_bottom_ul_amrc li a {
-  color: #999;
+  color: black;
   margin: 0 12px;
 }
 
