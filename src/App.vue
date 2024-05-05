@@ -56,13 +56,13 @@
 
         <ul class="social_footer_ul">
           <li>
-            <a href="http://webenlance.com"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.facebook.com/IESValledelJertePlasencia" target="_blank"><i class="fab fa-facebook-f"></i></a>
           </li>
           <li>
-            <a href="http://webenlance.com"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/iesvallejpla/?hl=es" target="_blank"><i class="fab fa-instagram"></i></a>
           </li>
           <li>
-            <a href="http://webenlance.com"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/IESValleJPla" target="_blank"><i class="fab fa-twitter"></i></a>
           </li>
         </ul>
       </div>
@@ -110,7 +110,16 @@ html {
 .navbar {
   position: relative;
   width: 100vw;
-  }
+}
+
+.dropdown-item {
+  text-align: center;
+}
+
+.dropdown-item:hover {
+  background-color: #f8f9fa;
+  border-radius: 100%;
+}
 
 main {
   display: flex;

@@ -1,13 +1,12 @@
 <template>
-  <div class="entrenamientos">
-    <!--
+      <!--
       https://www.runnersworld.com/es/training/a32795205/plan-entrenamiento-maraton-principiantes/ 
 
       https://as.com/deporteyvida/2019/04/26/portada/1556276205_798313.html#:~:text=Qu%C3%A9%20se%20debe%20comer%20antes%20de%20correr%20una%20marat%C3%B3n&text=mantener%20la%20energ%C3%ADa.-,La%20mejor%20opci%C3%B3n%20es%20tomar%20alimentos%20ricos%20en%20carbohidratos%20y,el%20riesgo%20de%20problema%20estomacales. 
 
       https://www.asics.com/es/es-es/running-advice/returning-to-training-after-your-marathon/#:~:text=Una%20buena%20forma%20de%20empezar,de%20correr%20sobre%20superficies%20duras. 
     -->
-
+  <div class="entrenamientos">
     <div id="list-info" class="list-group">
       <a class="list-group-item list-group-item-action" href="#list-item-1">Entrenamiento</a>
       <a class="list-group-item list-group-item-action" href="#list-item-2">Lesiones</a>
@@ -15,44 +14,92 @@
       <a class="list-group-item list-group-item-action" href="#list-item-4">Día Después</a>
     </div>
     <div data-spy="scroll" data-target="#list-info" data-offset="0" class="scrollspy-example">
-      <h4 id="list-item-1">Entrenamiento básico para principiantes </h4> 
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis corrupti repudiandae aut ipsa, fugiat autem
-        exercitationem magni reiciendis non odit, veritatis quas atque ut praesentium odio sint ea ratione id officia
-        eaque? Porro harum aut asperiores molestias dolorem itaque dolorum cum, deserunt in. Harum unde tempora,
-        voluptatum ad quas explicabo quam recusandae blanditiis facilis hic voluptas dolores fugiat voluptates labore
-        nesciunt impedit itaque illum, doloremque nisi dolorum veniam numquam alias maiores eos. Eaque, quod. Nam
-        repellat culpa aliquam totam tempora, modi in, commodi, nostrum deserunt ipsam expedita consequuntur ullam
-        aliquid dignissimos nobis iste suscipit perferendis sint! Eos earum quo libero.</p>
-        <p><a href="#list-info"><i class="fa-solid fa-arrow-up" ></i></a></p>
-      <h4 id="list-item-2">Cómo evitar lesiones</h4>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor laboriosam iusto error unde blanditiis,
-        voluptatem soluta! Nihil eveniet, porro reprehenderit reiciendis voluptatum autem accusantium tenetur assumenda!
-        Molestiae porro voluptatem quaerat, at sint voluptates non, nostrum animi ex sed cupiditate tenetur laborum
-        accusantium, ratione maxime facilis cumque ea delectus incidunt! Deleniti dolorum, dolore eaque quo totam ex ut
-        sequi obcaecati hic in quas! Nobis, earum tenetur autem sit hic quibusdam reiciendis temporibus labore fugiat
-        debitis dolore veniam totam perferendis repellendus sunt beatae quod eum ratione veritatis dolor, itaque ipsam
-        illum? Libero fuga adipisci sed provident at ullam laborum dolores aspernatur quis!</p>
-        <p><a href="#list-info"><i class="fa-solid fa-arrow-up" ></i></a></p>
-      <h4 id="list-item-3">Qué comer antes de una maratón</h4>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad eius sapiente id deserunt perspiciatis alias
-        recusandae, expedita magni aliquam consequatur soluta consequuntur quisquam facilis enim voluptate quidem
-        magnam. Iste totam debitis accusantium consequatur maxime nihil? Nam doloremque explicabo, nostrum minima
-        dolorum corporis corrupti repudiandae eum magnam illo ab nemo ea voluptates quaerat voluptatem labore eligendi
-        perspiciatis blanditiis voluptas enim et dicta a id! Deleniti similique officia nulla iure perspiciatis aut
-        delectus obcaecati! Atque error, ratione alias nostrum iusto repudiandae! Vitae reprehenderit temporibus
-        deserunt consectetur illo, consequatur debitis harum perspiciatis repudiandae quas rem ipsa eius perferendis,
-        eos consequuntur. Culpa, consequatur non.</p>
-        <p><a href="#list-info"><i class="fa-solid fa-arrow-up" ></i></a></p>
-      <h4 id="list-item-4">Qué hacer el día después</h4>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi doloribus natus ut eum quo, doloremque
-        veniam ab vel, suscipit accusantium tenetur incidunt consectetur officia cupiditate, facilis a magnam saepe?
-        Adipisci distinctio cumque totam velit eum sed aut delectus illum corporis? Eos et at ad quos tenetur ducimus.
-        Quod, officiis error. Rerum porro accusantium error sint? Omnis alias veritatis atque nemo maxime culpa, labore
-        doloremque odit delectus reiciendis similique. Saepe sapiente, sit eaque quis, facilis, ipsum maxime minima
-        laborum accusantium veritatis dolorem. Ullam mollitia fuga magni provident beatae id earum numquam,
-        necessitatibus soluta veniam illo dignissimos vitae, vero, nobis eligendi pariatur.</p>
-        <p><a href="#list-info"><i class="fa-solid fa-arrow-up" ></i></a></p>
+      <h4 id="list-item-1">Entrenamiento básico para principiantes</h4> 
+      <p>Para los nuevos corredores, un plan de entrenamiento semanal podría incluir:</p>
+      <ul>
+        <li><strong>Lunes:</strong> Descanso o actividad ligera.</li>
+        <li><strong>Martes:</strong> Carrera corta (3-5 km), intensidad moderada.</li>
+        <li><strong>Miércoles:</strong> Entrenamiento de fuerza (foco en piernas y core).</li>
+        <li><strong>Jueves:</strong> Carrera de intervalos o sprints cortos.</li>
+        <li><strong>Viernes:</strong> Descanso o yoga para corredores.</li>
+        <li><strong>Sábado:</strong> Carrera larga (incrementar gradualmente la distancia cada semana).</li>
+        <li><strong>Domingo:</strong> Actividad recreativa, como caminar o nadar.</li>
+      </ul>
+      <p>Recuerda incrementar gradualmente tu distancia semanal en no más del 10% para evitar sobrecargas.</p>
+      
+      <h4>Entrenamiento inclusivo para todos</h4>
+      <p>Entendemos la importancia de un enfoque inclusivo, por eso ofrecemos programas de entrenamiento que se adaptan a diferentes capacidades:</p>
+      <ul>
+        <li><strong>Personas con movilidad reducida:</strong> Sesiones de entrenamiento en piscina y ejercicios de resistencia adaptados.</li>
+        <li><strong>Corredores en silla de ruedas:</strong> Circuitos diseñados con rampas y superficies adecuadas, además de técnicas específicas de empuje.</li>
+        <li><strong>Personas con deficiencias visuales:</strong> Posibilidad de correr con guías y entrenamiento para mejorar la percepción espacial a través del sonido.</li>
+        <li><strong>Personas con deficiencias auditivas:</strong> Uso de señales visuales en el entrenamiento y durante la carrera para indicaciones y soporte.</li>
+      </ul>
+      <p>Estos entrenamientos se enfocan no solo en la preparación física sino también en fortalecer la confianza y autonomía de cada participante.</p>
+      <p><a href="#list-info"><i class="fa-solid fa-arrow-up" ></i></a></p>
 
+      <hr />
+
+      <h4 id="list-item-2">Cómo evitar lesiones</h4>
+      <p>Las lesiones comunes en corredores incluyen tendinitis, fascitis plantar, y síndrome de la banda iliotibial. Para prevenirlas, considera lo siguiente:</p>
+      <ul>
+        <li>Utiliza calzado adecuado que ofrezca el soporte necesario.</li>
+        <li>Alterna tus rutas para evitar terrenos muy duros o irregulares constantemente.</li>
+        <li>Incluye entrenamiento de fuerza para mejorar la resistencia muscular y articular.</li>
+        <li>No ignores el dolor: si persiste después de varios días de descanso, consulta a un especialista.</li>
+      </ul>
+
+      <h4>Prevención de lesiones en un entorno inclusivo</h4>
+      <p>Además de las lesiones comunes, nos centramos en prevenir complicaciones específicas que pueden surgir en personas con diferentes capacidades:</p>
+      <ul>
+        <li><strong>Sillas de ruedas:</strong> Técnicas específicas para evitar la tendinitis y lesiones por esfuerzo repetitivo en los brazos.</li>
+        <li><strong>Deficiencias visuales:</strong> Estrategias para evitar caídas y golpes, usando equipamiento protector como rodilleras y cascos.</li>
+        <li><strong>Prótesis:</strong> Ajuste correcto y verificación de prótesis para evitar irritaciones y lesiones en la piel.</li>
+      </ul>
+      <p><a href="#list-info"><i class="fa-solid fa-arrow-up" ></i></a></p>
+      
+      <hr />
+      
+      <h4 id="list-item-3">Qué comer antes de una maratón</h4>
+      <p>Una dieta equilibrada es crucial para los corredores. En los días previos a la maratón, tu dieta podría incluir:</p>
+      <ul>
+        <li><strong>Carbohidratos:</strong> Pasta integral, arroz integral, patatas, y panes integrales para almacenar energía.</li>
+        <li><strong>Proteínas:</strong> Pollo, pescado, huevos y legumbres para la reparación y mantenimiento muscular.</li>
+        <li><strong>Grasas saludables:</strong> Aguacate, nueces, y semillas para la inflamación y la recuperación.</li>
+        <li><strong>Hidratación:</strong> Agua y bebidas isotónicas para mantener los niveles de electrolitos.</li>
+      </ul>
+
+      <h4>Nutrición adaptada a todos</h4>
+      <p>La dieta para los participantes debe ser inclusiva y considerar necesidades específicas:</p>
+      <ul>
+        <li><strong>Baja en azúcares:</strong> Para competidores con diabetes, ofreciendo alternativas de alimentos integrales y bajos en IG.</li>
+        <li><strong>Alta en proteínas:</strong> Para aquellos en proceso de recuperación o adaptación a prótesis, para fortalecer la musculatura.</li>
+        <li><strong>Rica en calcio:</strong> Para competidores con osteoporosis, incorporando lácteos fortificados y verduras de hoja verde.</li>
+      </ul>
+
+      <p><a href="#list-info"><i class="fa-solid fa-arrow-up" ></i></a></p>
+      
+      <hr />
+      
+      <h4 id="list-item-4">Qué hacer el día después</h4>
+      <p>Después de la maratón, es crucial tomarte el tiempo para recuperarte adecuadamente. Algunas recomendaciones incluyen:</p>
+      <ul>
+        <li>Hidratarte continuamente para reponer líquidos perdidos.</li>
+        <li>Comer alimentos ricos en proteínas y carbohidratos para ayudar a recuperar los músculos y rellenar tus reservas de energía.</li>
+        <li>Realizar estiramientos suaves o yoga para mejorar la flexibilidad y disminuir la rigidez.</li>
+        <li>Considerar masajes o baños de agua fría para aliviar la inflamación y mejorar la circulación.</li>
+      </ul>
+
+      <h4>Recuperación y celebración de la diversidad</h4>
+      <p>Después de la carrera, ofrecemos espacios de recuperación que son totalmente accesibles y personalizados para atender las necesidades específicas de todos los participantes:</p>
+      <ul>
+        <li>Zonas de descanso con acceso adaptado para sillas de ruedas.</li>
+        <li>Servicios de interpretación para personas con deficiencias auditivas durante los discursos y premiaciones.</li>
+        <li>Actividades de relajación y meditación guiadas también en lenguaje de señas.</li>
+      </ul>
+      <p>Estas actividades no solo buscan recuperar físicamente a los competidores sino también celebrar la gran diversidad de participantes y fomentar la inclusión en todos los aspectos del evento.</p>
+      
+      <p><a href="#list-info"><i class="fa-solid fa-arrow-up" ></i></a></p>
     </div>
 
   </div>
@@ -73,17 +120,62 @@ export default {
 
 <style scoped>
 
-
-h2 {
-  color: green;
-}
-
-.entrenamientos {
-  min-height: 100vh;
-}
-
 #list-info {
   display: flex;
   flex-direction: row;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
 }
+
+.entrenamientos {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+.entrenamientos ul {
+  padding-left: 20px;
+}
+
+.entrenamientos li {
+  margin-bottom: 10px;
+}
+
+.list-group-item {
+  cursor: pointer;
+  color: #007bff; 
+}
+
+.list-group-item:hover {
+  background-color: #f8f9fa; 
+}
+
+.scrollspy-example h4 {
+  color: #0056b3; 
+}
+
+.scrollspy-example p {
+  text-align: center;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.scrollspy-example {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: lightgrey;
+  margin-top: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+
+.fa-arrow-up {
+  font-size: 16px;
+  color: #007bff;
+}
+
+
+
 </style>

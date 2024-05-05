@@ -117,8 +117,8 @@
 
       <!-- Recorrido -->
       <h3>Recorrido de la Carrera</h3>
-      <p>Si quieren conocer la zona antes de participar en esta increíble aventura, aquí debajo os dejamos el mapa para que puedan observar los lugares por donde se realizará el recorrido.</p>
-      <p>También podrán visitar la ruta (aproximada) que se llevará a cabo <a href="https://earth.google.com/earth/d/1CjEVzochuH7dJtIM7jixOeiIN_EHOezU?usp=sharing">pulsando aquí</a>. </p>
+      <p>Si quieren conocer la zona antes de participar en esta increíble aventura, aquí os dejamos el mapa para que puedan observar los lugares por donde se realizará el recorrido.</p>
+      <p>También podrán visitar la ruta (aproximada) que se llevará a cabo <a href="https://earth.google.com/earth/d/1CjEVzochuH7dJtIM7jixOeiIN_EHOezU?usp=sharing" target="_blank">pulsando aquí</a>. </p>
 
     </div>
 
@@ -164,7 +164,7 @@ export default {
 
 /* Contenido principal */
 .contenido {
-  background-color: lightgray;
+  background-color: lightgrey;
   /* Fondo blanco para resaltar el contenido */
   border-radius: 8px;
   padding: 20px;

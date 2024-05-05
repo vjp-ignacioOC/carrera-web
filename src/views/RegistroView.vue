@@ -117,34 +117,31 @@ export default {
 
 <style scoped>
 
+.form-container {
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  height: 100vh; 
+  background-color: #f4f4f4; 
+}
+
 .formularioRegistro {
-  background: #ffffff;
+  background: lightgrey;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 400px;
-  margin: auto;
-  /* Centrado horizontal */
-  position: relative;
-  /* Para centrado vertical */
-  top: 50%;
-  /* Para centrado vertical */
-  transform: translateY(-50%);
-  /* Para centrado vertical */
-}
-
-.form-container {
-  height: 100vh;
+  max-width: 400px; 
 }
 
 .form-group {
-  margin-bottom: 1rem;
+  margin-bottom: 1rem; 
 }
 
 label {
   display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem; 
+  font-weight: 600; 
   color: #333;
 }
 
@@ -156,10 +153,6 @@ input[type="password"] {
   border: 1px solid #ccc;
   border-radius: 5px;
   box-sizing: border-box;
-}
-
-.form-check-label {
-  margin-left: 0.5rem;
 }
 
 .form-text {
@@ -183,4 +176,12 @@ input[type="password"] {
 .btn:hover {
   background-color: #0056b3;
 }
+
+/* Mejoras de accesibilidad */
+input:focus, button:focus {
+  outline: none; 
+  border-color: #0056b3; 
+  box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.25); 
+}
+
 </style>

@@ -21,7 +21,7 @@ import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../firebase';
 import { createVuetify } from 'vuetify'
 import 'vuetify/styles'
-import { VBtn } from "vuetify/lib/components/index.mjs"; 
+import { VBtn } from "vuetify/lib/components/index.mjs";
 
 const vuetify = createVuetify();
 
@@ -61,26 +61,22 @@ export default {
 </script>
 
 <style scoped>
-
-.formularioRegistro {
-  background: #ffffff;
+.form-container {
+  background: lightgrey;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 400px;
-  margin: auto;
-  /* Centrado horizontal */
-  position: relative;
-  /* Para centrado vertical */
-  top: 50%;
-  /* Para centrado vertical */
-  transform: translateY(-50%);
-  /* Para centrado vertical */
+  height: auto;
+  margin: 20px auto;
+  box-sizing: border-box;
 }
+
 
 .form-group {
   margin-bottom: 1rem;
+  padding: 0;
 }
 
 label {
