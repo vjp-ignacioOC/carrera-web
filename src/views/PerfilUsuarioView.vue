@@ -18,7 +18,6 @@
           <p>Nombre: {{ nombre }}</p>
           <p>Apellidos: {{ apellidos }}</p>
           <p>Email: {{ email }}</p>
-          <p>Número de Dorsal: {{ contadorDorsal }}</p>
         </div>
       </div>
     </div>
