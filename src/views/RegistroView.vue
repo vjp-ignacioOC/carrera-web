@@ -54,7 +54,6 @@ export default {
       password: '',
       confirmPassword: '',
       imageUrl: '',
-      contadorDorsal: 0,
       // rules: {
       //   required: (value) => !!value || 'Este campo es requerido',
       //   email: (value) => {
@@ -101,7 +100,6 @@ export default {
           nombre: this.nombre,
           apellidos: this.apellidos,
           imageUrl: this.imageUrl,
-          contadorDorsal: this.contadorDorsal,
         });
 
         this.$router.push('/login');
