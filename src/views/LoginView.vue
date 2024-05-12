@@ -1,6 +1,10 @@
 <template>
   <div class="form-container">
     <form class="formularioRegistro">
+
+      <div class="titulo">
+        <h2>Iniciar Sesión</h2>
+      </div>
       <div class="form-group">
         <label for="InputEmail">Introduzca su Email</label>
         <input type="email" v-model="email" class="form-control" id="InputEmail" aria-describedby="emailHelp"
@@ -9,6 +13,9 @@
       <div class="form-group">
         <label for="InputPassword">Contraseña</label>
         <input type="password" v-model="password" class="form-control" id="InputPassword" placeholder="Contraseña">
+      </div>
+      <div class="registro">
+        <small id="emailHelp" class="form-text text-muted">¿No tienes cuenta? <RouterLink to="/registro">Regístrate</RouterLink></small>
       </div>
 
       <v-btn @click="iniciarSesion" class="btn btn-primary">Acceder</v-btn>

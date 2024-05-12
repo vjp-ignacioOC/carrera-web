@@ -1,6 +1,9 @@
 <template>
   <div class="form-container">
     <form ref="registrarUsuario" class="formularioRegistro">
+      <div class="titulo">
+        <h2>Registrarse</h2>
+      </div>
       <div class="form-group">
         <label for="registerEmail">Email</label>
         <input type="email" v-model="email" class="form-control" id="registerEmail" placeholder="Email">
@@ -21,7 +24,9 @@
         <label for="confirmPassword">Confirmar Contraseña</label>
         <input type="password" v-model="confirmPassword" class="form-control" id="confirmPassword"
           placeholder="Confirmar Contraseña">
-        <small id="emailHelp" class="form-text text-muted">No comparta su contraseña con nadie.</small>
+      </div>
+      <div class="login">
+        <small id="emailHelp" class="form-text text-muted">¿Ya tienes cuenta? <RouterLink to="/login">Inicia Sesión</RouterLink></small>
       </div>
       <v-btn @click="crearUsuario" class="btn btn-primary">Registrar</v-btn>
     </form>
@@ -54,25 +59,6 @@ export default {
       password: '',
       confirmPassword: '',
       imageUrl: '',
-      // rules: {
-      //   required: (value) => !!value || 'Este campo es requerido',
-      //   email: (value) => {
-      //     const validarEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      //     return validarEmail.test(value) || 'El email no es válido';
-      //   },
-      //   password: (value) => {
-      //     if (value.length < 6) {
-      //       return 'La contraseña debe tener al menos 6 caracteres';
-      //     }
-      //     return true;
-      //   },
-      //   confirmPassword: (value) => {
-      //     if (value !== this.password) {
-      //       return 'Las contraseñas no coinciden';
-      //     }
-      //     return true;
-      //   },
-      // },
     };
   },
   computed: {
@@ -120,6 +106,7 @@ export default {
   align-items: center; 
   justify-content: center; 
   height: 100vh; 
+  width: 100vw;
   background-color: #f4f4f4; 
 }
 

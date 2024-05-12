@@ -1,6 +1,10 @@
 <template>
   <div>
 
+    <div class="logoEslogan">
+        <img src="./../assets/corre-forrext-logo.png" alt="logoEslogan">
+    </div>
+
     <div class="contenido mb-5 px-5">
 
       <h2>¡Bienvenidos a Corre Forr<span id="E">E</span><span id="X">X</span><span id="T">T</span>!</h2>
@@ -314,6 +318,19 @@ export default {
 
 
 <style scoped>
+
+.logoEslogan {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.logoEslogan img {
+  width: 40%;
+  height: auto;
+}
+
 /* Carrusel */
 .carousel-item img {
   width: 100%;
