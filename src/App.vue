@@ -19,7 +19,7 @@
           <li class="nav-item">
             <RouterLink to="/patrocinadores" class="nav-link">Patrocinadores</RouterLink>
           </li>
-          <li class="nav-item" v-if="conectado">
+          <li class="nav-item miPerfil" v-if="conectado">
             <Router-link to="/perfil" class="nav-link">Mi Perfil</Router-link>
           </li>
           <li class="nav-item dropdown" v-else>
@@ -111,6 +111,23 @@ html {
   position: relative;
   width: 100vw;
 }
+
+.navbar-brand span {
+  font-weight: bold;
+}
+
+/** Solo las clases miPerfil y el dropdown aparezcan a la derecha del nav, el resto que permanezca a la izquierda */
+.navbar-nav {
+  width: 100%;
+  display: flex;
+}
+
+.miPerfil, .dropdown {
+  font-weight: bold;
+  margin-left: auto;
+  margin-right: 5%;
+}
+
 
 .dropdown-item {
   text-align: center;

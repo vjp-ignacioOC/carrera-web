@@ -4,16 +4,18 @@
   <div class="container principal">
 
     <div class="row">
-      <h1 class="col-12">Perfil de {{ nombre }}</h1>
+      <div class="col-12">
+        <h1>Mi Perfil</h1>
+      </div>
     </div>
 
-    <div ref="perfil" class="row">
+    <div ref="perfil" class="row w-100">
       <!-- Muestra la foto de perfil del usuario -->
-      <div class="col-md-4">
-        <img :src="imagenUrl" alt="Foto de perfil" class="fotoPerfil" >
+      <div class="col-md-4 p-0 text-center">
+        <img :src="imagenUrl" alt="Foto de perfil" class="fotoPerfil m-2"  >
       </div>
       <!-- Muestra los datos del usuario logueado -->
-      <div class="col-md-8">
+      <div class="col-md-8 p-0 d-flex justify-content-center">
         <div class="datosUsuario">
           <p>Nombre: {{ nombre }}</p>
           <p>Apellidos: {{ apellidos }}</p>
@@ -30,13 +32,13 @@
       </div>
       <div class="col-md-6 botones">
         <v-btn @click="desconectarPerfil" class="btn btn-danger">Desconectar</v-btn>
-        <v-btn @click="descargarPDF" class="btn btn-warning">Descargar PDF</v-btn>
+        <v-btn @click="descargarPDF" class="btn btn-warning">Descargar Dorsal PDF</v-btn>
       </div>
     </div>
 
     <div class="row">
-      <div class="col-md-12 cambiarContraseña">
-        <p>Si quiere restablecer su contraseña <span id="resetPassword" @click="recuperarContrasenia">Pulse aquí</span>
+      <div class="col-md-12 cambiarPassword">
+        <p>En caso de querer restablecer su contraseña <span id="resetPassword" @click="recuperarContrasenia">Pulse aquí</span>
         </p>
       </div>
     </div>
@@ -74,7 +76,6 @@ export default {
       apellidos: '',
       file: null,
       imagenUrl: '',
-      contadorDorsal: '',
     };
   },
   computed: {
@@ -116,7 +117,6 @@ export default {
           this.nombre = docSnap.data().nombre;
           this.apellidos = docSnap.data().apellidos;
           this.imagenUrl = docSnap.data().imageUrl;
-          this.contadorDorsal = docSnap.data().contadorDorsal;
         } else {
           console.log("No se encontraron datos del usuario.");
         }
@@ -211,19 +211,39 @@ export default {
 
 <!-- Estilos de CSS para la vista -->
 <style scoped>
-h1 {
-  color: white;
+
+.principal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  background-color: lightgray;
+  box-shadow: 15px 10px 10px rgba(0, 0, 0, 0.1);
 }
+
 
 .fotoPerfil {
   width: 100%;
   max-width: 200px;
   height: auto;
+  border-radius: 50%;
+  box-shadow: 15px 10px 5px rgba(0, 0, 0, 0.1);
+} 
+
+.datosUsuario {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 20px;
 }
 
 .datosUsuario p {
   margin: 5px 0;
+  font-size: 1.2em;
 }
+
 
 .botones {
   display: flex;
@@ -238,20 +258,28 @@ h1 {
   margin-right: 10px;
 }
 
-.principal {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 80vh;
-}
-
-.cambiarContraseña {
+.cambiarPassword {
   margin-top: 20px;
 }
 
 #resetPassword {
   cursor: pointer;
   color: blue;
+}
+
+#resetPassword:hover {
+  text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+  .botones {
+    justify-content: flex-start;
+    margin-top: 10px;
+  }
+
+  .cambiarContraseña {
+    margin-top: 10px;
+  }
 }
 </style>
