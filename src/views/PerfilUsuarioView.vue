@@ -12,7 +12,7 @@
     <div ref="perfil" class="row w-100">
       <!-- Muestra la foto de perfil del usuario -->
       <div class="col-md-4 p-0 text-center">
-        <img :src="imagenUrl" alt="Foto de perfil" class="fotoPerfil m-2"  >
+        <img :src="imagenUrl" alt="Foto de perfil" class="fotoPerfil m-2">
       </div>
       <!-- Muestra los datos del usuario logueado -->
       <div class="col-md-8 p-0 d-flex justify-content-center">
@@ -38,7 +38,8 @@
 
     <div class="row">
       <div class="col-md-12 cambiarPassword">
-        <p>En caso de querer restablecer su contraseña <span id="resetPassword" @click="recuperarContrasenia">Pulse aquí</span>
+        <p>En caso de querer restablecer su contraseña <span id="resetPassword" @click="recuperarContrasenia">Pulse
+            aquí</span>
         </p>
       </div>
     </div>
@@ -53,12 +54,15 @@ import { getAuth, signOut, sendPasswordResetEmail } from "firebase/auth";
 import { auth, db, storage } from "../firebase";
 import { doc, getDoc } from "firebase/firestore";
 import { ref as storageRef, uploadBytes, getDownloadURL } from "firebase/storage";
+// import firebase from "firebase/app";
+import 'firebase/storage';
+import 'firebase/firestore';
 import { setDoc } from 'firebase/firestore';
 import { jsPDF } from "jspdf";
 import html2canvas from "html2canvas";
 import { createVuetify } from 'vuetify'
 import 'vuetify/styles'
-import { VBtn } from "vuetify/lib/components/index.mjs"; 
+import { VBtn } from "vuetify/lib/components/index.mjs";
 
 const vuetify = createVuetify();
 
@@ -124,40 +128,39 @@ export default {
     },
     // Este método se dispara cuando el usuario selecciona un archivo. Si el archivo es JPG o JPEG, se llama a convertirAPng.
     seleccionarFoto(event) {
-    this.file = event.target.files[0];
-    if (this.file && (this.file.type === 'image/jpeg' || this.file.type === 'image/jpg')) {
-      // Convertir a PNG si el archivo es JPEG/JPG
-      this.convertirAPng(this.file);
-    }
-  },
-  // Este método carga el archivo original como una imagen, dibuja esta imagen en un <canvas>, y luego utiliza toDataURL para obtener la imagen en formato PNG. Finalmente, se utiliza toBlob para convertir la URL de datos en un blob, que luego se convierte en un objeto File de PNG que se puede subir.
-  convertirAPng(file) {
-    const reader = new FileReader();
-    reader.onload = (event) => {
-      const imgElement = document.createElement("img");
-      imgElement.src = event.target.result;
-      imgElement.onload = () => {
-        const canvas = document.createElement("canvas");
-        canvas.width = imgElement.width;
-        canvas.height = imgElement.height;
-        const ctx = canvas.getContext("2d");
-        ctx.drawImage(imgElement, 0, 0, canvas.width, canvas.height);
-        canvas.toDataURL('image/png'); // Convertir a PNG
+      this.file = event.target.files[0];
+      if (this.file && (this.file.type === 'image/jpeg' || this.file.type === 'image/jpg')) {
+        // Convertir a PNG si el archivo es JPEG/JPG
+        this.convertirAPng(this.file);
+      }
+    },
+    // Este método carga el archivo original como una imagen, dibuja esta imagen en un <canvas>, y luego utiliza toDataURL para obtener la imagen en formato PNG. Finalmente, se utiliza toBlob para convertir la URL de datos en un blob, que luego se convierte en un objeto File de PNG que se puede subir.
+    convertirAPng(file) {
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        const imgElement = document.createElement("img");
+        imgElement.src = event.target.result;
+        imgElement.onload = () => {
+          const canvas = document.createElement("canvas");
+          canvas.width = imgElement.width;
+          canvas.height = imgElement.height;
+          const ctx = canvas.getContext("2d");
+          ctx.drawImage(imgElement, 0, 0, canvas.width, canvas.height);
 
-        canvas.toBlob((blob) => {
-          // Conserva el nombre original pero cambia la extensión a .png
-          const nombreOriginal = file.name.replace(/\.[^/.]+$/, "");
-          const nombreNuevo = `${nombreOriginal}.png`;
-          this.file = new File([blob], nombreNuevo, {
-            type: 'image/png',
-            lastModified: Date.now()
-          });
-          this.subirFoto(); // Subir después de la conversión
-        }, 'image/png');
+          canvas.toBlob((blob) => {
+            // Conserva el nombre original pero cambia la extensión a .png
+            const nombreOriginal = file.name.replace(/\.[^/.]+$/, "");
+            const nombreNuevo = `${nombreOriginal}.png`;
+            this.file = new File([blob], nombreNuevo, {
+              type: 'image/png',
+              lastModified: Date.now()
+            });
+            this.subirFoto(); // Subir después de la conversión
+          }, 'image/png');
+        };
       };
-    };
-    reader.readAsDataURL(file);
-  },
+      reader.readAsDataURL(file);
+    },
     subirFoto() {
       if (!this.file) {
         alert('Por favor, selecciona un archivo primero.');
@@ -186,19 +189,40 @@ export default {
     },
     // Descargar el perfil del usuario en formato PDF
     descargarPDF() {
+      // Obtener los datos del usuario
+      const nombre = this.nombre;
+      const apellidos = this.apellidos;
+      const email = this.email;
       html2canvas(this.$refs.perfil, { scale: 2 }).then(canvas => {
         const imgData = canvas.toDataURL('image/png');
         const pdf = new jsPDF({
           orientation: 'landscape',
           unit: 'px',
-          format: 'a6'
+          format: 'a5'
         });
         // Calcular el ancho y alto del PDF para mantener la relación de aspecto de la imagen
-        const pdfWidth = pdf.internal.pageSize.getWidth();
-        const pdfHeight = (canvas.height * pdfWidth) / canvas.width;
+        const pdfWidth = pdf.internal.pageSize.getWidth() / 2;
+        const pdfHeight = canvas.height / 2.5;
+        console.log('IMAGEEEEEEEN', imgData)
 
-        pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
-        pdf.save('perfil.pdf');
+        // Obtener la imagen desde la URL de descarga
+        const img = new Image();
+        const imgUrl = this.imagenUrl
+        img.src = imgUrl;
+        img.onload = function () {
+          // Agregar la imagen al PDF una vez cargada
+          pdf.addImage(img, 'PNG', 120, 20, pdfWidth, pdfHeight);
+          // Agregar los datos del usuario al PDF
+          const lineHeight = 20;
+          const startX = 170;
+          const startY = pdfHeight + 50;
+          pdf.setFontSize(12);
+          pdf.text(`Nombre: ${nombre}`, startX, startY);
+          pdf.text(`Apellidos: ${apellidos}`, startX, startY + lineHeight);
+          pdf.text(`Email: ${email}`, startX, startY + lineHeight * 2);
+          pdf.save('perfil.pdf');
+        };
+
       }).catch(error => console.error('Error al generar PDF:', error));
     }
   },
@@ -211,7 +235,6 @@ export default {
 
 <!-- Estilos de CSS para la vista -->
 <style scoped>
-
 .principal {
   display: flex;
   flex-direction: column;
@@ -229,7 +252,7 @@ export default {
   height: auto;
   border-radius: 50%;
   box-shadow: 15px 10px 5px rgba(0, 0, 0, 0.1);
-} 
+}
 
 .datosUsuario {
   display: flex;
@@ -237,6 +260,7 @@ export default {
   justify-content: center;
   align-items: flex-start;
   margin-left: 20px;
+  z-index: 1;
 }
 
 .datosUsuario p {

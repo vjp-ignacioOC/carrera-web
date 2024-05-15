@@ -50,7 +50,7 @@
         <div class="card">
           <div class="card-header" id="headingUno">
             <h2 class="mb-0">
-              <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+              <button class="btn btn-block text-left" type="button" data-toggle="collapse"
                 data-target="#collapseUno" aria-expanded="true" aria-controls="collapseUno">
                 Fecha y lugar:
               </button>
@@ -70,7 +70,7 @@
         <div class="card">
           <div class="card-header" id="headingDos">
             <h2 class="mb-0">
-              <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+              <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
                 data-target="#collapseDos" aria-expanded="false" aria-controls="collapseDos">
                 Inscripción Gratuita:
               </button>
@@ -90,7 +90,7 @@
         <div class="card">
           <div class="card-header" id="headingTres">
             <h2 class="mb-0">
-              <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+              <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
                 data-target="#collapseTres" aria-expanded="false" aria-controls="collapseTres">
                 Inclusión y Diversidad:
               </button>
@@ -109,7 +109,7 @@
         <div class="card">
           <div class="card-header" id="headingCuatro">
             <h2 class="mb-0">
-              <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+              <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
                 data-target="#collapseCuatro" aria-expanded="false" aria-controls="collapseCuatro">
                 Una Carrera Diferente:
               </button>
@@ -131,7 +131,7 @@
       <div class="card">
         <div class="card-header" id="headingCinco">
           <h2 class="mb-0">
-            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+            <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
               data-target="#collapseCinco" aria-expanded="false" aria-controls="collapseCinco">
               Fomento de la Vida Sana:
             </button>
@@ -148,7 +148,7 @@
       <div class="card">
         <div class="card-header" id="headingSeis">
           <h2 class="mb-0">
-            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+            <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
               data-target="#collapseSeis" aria-expanded="false" aria-controls="collapseSeis">
               Impulso al Turismo Local:
             </button>
@@ -166,7 +166,7 @@
       <div class="card">
         <div class="card-header" id="headingSiete">
           <h2 class="mb-0">
-            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+            <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
               data-target="#collapseSiete" aria-expanded="false" aria-controls="collapseSiete">
               Actividades Complementarias:
             </button>
@@ -186,7 +186,7 @@
       <div class="card">
         <div class="card-header" id="headingOcho">
           <h2 class="mb-0">
-            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+            <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
               data-target="#collapseOcho" aria-expanded="false" aria-controls="collapseOcho">
               La Ruta de la Maratón:
             </button>
@@ -226,7 +226,7 @@
       <div class="card">
         <div class="card-header" id="headingNueve">
           <h2 class="mb-0">
-            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+            <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
               data-target="#collapseNueve" aria-expanded="false" aria-controls="collapseNueve">
               Servicios Durante la Carrera:
             </button>
@@ -247,7 +247,7 @@
       <div class="card">
         <div class="card-header" id="headingDiez">
           <h2 class="mb-0">
-            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+            <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
               data-target="#collapseDiez" aria-expanded="false" aria-controls="collapseDiez">
               Post-Maratón:
             </button>
@@ -270,7 +270,7 @@
       <div class="card">
         <div class="card-header" id="headingOnce">
           <h2 class="mb-0">
-            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+            <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
               data-target="#collapseOnce" aria-expanded="false" aria-controls="collapseOnce">
               Información Sobre el Recorrido de la Carrera:
             </button>
@@ -282,7 +282,7 @@
               que puedan observar los lugares por donde se realizará el recorrido.</p>
             <p>También podrán visitar la ruta (aproximada) que se llevará a cabo <a
                 href="https://earth.google.com/earth/d/1CjEVzochuH7dJtIM7jixOeiIN_EHOezU?usp=sharing"
-                target="_blank">pulsando aquí</a>. </p>
+                target="_blank">Pulsando aquí</a>. </p>
             <div class="recorrido d-flex justify-content-center">
               <!-- Mapa de la Ruta de la Maratón -->
 
@@ -392,7 +392,6 @@ p {
 @media (max-width: 768px) {
   .carousel-item img {
     height: 300px;
-    /* Altura más pequeña para dispositivos móviles */
   }
 
   .contenido,
@@ -404,12 +403,10 @@ p {
   h2,
   h3 {
     font-size: 16px;
-    /* Tamaño de fuente más pequeño para títulos en dispositivos móviles */
   }
 
   p {
     font-size: 14px;
-    /* Tamaño de fuente más pequeño para parrafos en dispositivos móviles */
   }
 }
 
