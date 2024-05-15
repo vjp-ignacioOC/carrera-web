@@ -213,4 +213,16 @@ footer p {
   color: black;
 }
 
+@media (max-width: 990px) {
+  .navbar-nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .miPerfil, .dropdown {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
 </style>

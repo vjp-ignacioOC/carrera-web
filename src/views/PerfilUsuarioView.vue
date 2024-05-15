@@ -64,6 +64,7 @@ import { createVuetify } from 'vuetify'
 import 'vuetify/styles'
 import { VBtn } from "vuetify/lib/components/index.mjs";
 
+
 const vuetify = createVuetify();
 
 
@@ -163,7 +164,7 @@ export default {
     },
     subirFoto() {
       if (!this.file) {
-        alert('Por favor, selecciona un archivo primero.');
+        alert('No se ha seleccionado ningún archivo.');
         return;
       }
       const user = auth.currentUser;
@@ -209,6 +210,10 @@ export default {
         const img = new Image();
         const imgUrl = this.imagenUrl
         img.src = imgUrl;
+        if(!imgUrl) {
+          alert('Necesita subir una imagen de perfil para poder descargar el dorsal en PDF.');
+          return;
+        }
         img.onload = function () {
           // Agregar la imagen al PDF una vez cargada
           pdf.addImage(img, 'PNG', 120, 20, pdfWidth, pdfHeight);
