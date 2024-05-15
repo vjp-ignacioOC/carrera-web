@@ -47,7 +47,7 @@
           <li><RouterLink to="/">Inicio</RouterLink></li>
           <li><RouterLink to="/entrenamientos">Info</RouterLink></li>
           <li><RouterLink to="/patrocinadores">Patrocinadores</RouterLink></li>
-          <li><a href="#">Reglamento</a></li>
+          <li><RouterLink to="/reglamento">Reglamento</RouterLink></li>
         </ul>
         <p class="text-center">
           Copyright &copy;2024 | Designed With by <a href="https://iesvallejertepla.educarex.es/" target="_blank"
