@@ -80,7 +80,7 @@
             <div class="card-body">
               <p>No hay costes asociados a la participación. Solo es necesario inscribirse previamente para asegurar un
                 lugar
-                en la carrera debido a la capacidad limitada. ¡Asegura tu lugar hoy mismo y forma parte de esta
+                en la carrera debido a la capacidad limitada. ¡<RouterLink to="/registro">Regístrate</RouterLink> y asegura tu lugar hoy mismo y forma parte de esta
                 experiencia
                 única!</p>
             </div>
