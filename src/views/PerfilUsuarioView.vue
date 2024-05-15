@@ -25,10 +25,10 @@
       <div class="row w-100 mt-5">
         <div class="col-md-12 d-flex justify-content-center">
           <h3 class="mr-2">¿Quiere subir una imagen de perfil? </h3>
-          <input type="file" @change="seleccionarFoto" id="fileInput" class="ml-2">
         </div>
-        <div class="col-md-12 d-flex justify-content-center mb-5">
-          <v-btn @click="subirFoto" class="btn btn-primary mt-3">Subir Archivo</v-btn>
+        <div class="col-md-12 d-flex justify-content-center mb-5 mt-5">
+          <input type="file" @change="seleccionarFoto" id="fileInput" class="mr-4">
+          <v-btn @click="subirFoto" class="btn btn-primary ml-4">Subir Archivo</v-btn>
         </div>
         <div class="col-md-12 botones mt-5">
           <v-btn @click="desconectarPerfil" class="btn btn-danger">Desconectar</v-btn>
