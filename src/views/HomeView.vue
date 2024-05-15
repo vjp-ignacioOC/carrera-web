@@ -29,7 +29,7 @@
             <img class="d-block" src="./../assets/imgDiversidad.jpeg" alt="Third slide" />
           </div>
           <div class="carousel-item mt-5">
-            <img class="d-block" src="./../assets/imgMaraton.jpeg" alt="Third slide" />
+            <img class="d-block" src="./../assets/imgMaraton.jpeg" alt="Four slide" />
           </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -411,9 +411,12 @@ p {
 }
 
 /* Media queries para ajustes en dispositivos más grandes */
-@media (min-width: 1200px) {
+@media only screen and  (min-width: 1500px) {
+  
   .carousel-item img {
-    height: 800px;
+    height: 750px;
+    object-fit: cover;
+
   }
 }
 </style>

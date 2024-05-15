@@ -203,7 +203,7 @@ export default {
         });
         // Calcular el ancho y alto del PDF para mantener la relación de aspecto de la imagen
         const pdfWidth = pdf.internal.pageSize.getWidth() / 2;
-        const pdfHeight = canvas.height / 2.5;
+        const pdfHeight = canvas.height / 3;
         console.log('IMAGEEEEEEEN', imgData)
 
         // Obtener la imagen desde la URL de descarga
@@ -216,15 +216,14 @@ export default {
         }
         img.onload = function () {
           // Agregar la imagen al PDF una vez cargada
-          pdf.addImage(img, 'PNG', 120, 20, pdfWidth, pdfHeight);
+          pdf.addImage(img, 'PNG', 120, 10, pdfWidth, pdfHeight);
           // Agregar los datos del usuario al PDF
           const lineHeight = 20;
           const startX = 170;
-          const startY = pdfHeight + 50;
+          const startY = pdfHeight + 30;
           pdf.setFontSize(12);
-          pdf.text(`Nombre: ${nombre}`, startX, startY);
-          pdf.text(`Apellidos: ${apellidos}`, startX, startY + lineHeight);
-          pdf.text(`Email: ${email}`, startX, startY + lineHeight * 2);
+          pdf.text(`Nombre: ${nombre} ${apellidos}`, startX, startY);
+          pdf.text(`Email: ${email}`, startX, startY + lineHeight);
           pdf.save('perfil.pdf');
         };
 
