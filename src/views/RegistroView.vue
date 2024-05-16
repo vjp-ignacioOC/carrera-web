@@ -77,14 +77,15 @@ export default {
         document.querySelector('.emailIncorrecto').classList.remove('d-none');
         return;
       }
-      if (this.password !== this.confirmPassword) {
-        alert('Las contraseñas no coinciden.');
-        return;
-      }
       if (this.password.length < 6) {
         alert('La contraseña debe tener al menos 6 caracteres');
         return;
       }
+      if (this.password !== this.confirmPassword) {
+        alert('Las contraseñas no coinciden.');
+        return;
+      }
+      
       try {
         const userCredential = await createUserWithEmailAndPassword(auth, this.email, this.password);
         const user = userCredential.user;
