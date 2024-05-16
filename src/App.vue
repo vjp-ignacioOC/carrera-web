@@ -45,7 +45,7 @@
       <div class="container">
         <ul class="foote_bottom_ul_amrc">
           <li><RouterLink to="/">Inicio</RouterLink></li>
-          <li><RouterLink to="/entrenamientos">Info</RouterLink></li>
+          <li><RouterLink to="/entrenamientos">Información</RouterLink></li>
           <li><RouterLink to="/patrocinadores">Patrocinadores</RouterLink></li>
           <li><RouterLink to="/reglamento">Reglamento</RouterLink></li>
         </ul>
