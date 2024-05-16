@@ -210,8 +210,8 @@
                 zona este.</li>
               <li>Kilómetro 20 a 25: Pasar cerca de la estación de tren y dirigirse hacia el Parque de la Coronación.
               </li>
-              <li>Kilómetro 25 a 30: Rodear el Parque de la Coronación y dirigirse hacia la Ermita de Santa Bárbara,
-                disfrutando de las vistas de la Sierra de Santa Bárbara.</li>
+              <li>Kilómetro 25 a 30: Rodear el Parque de la Coronación y dirigirse hacia la Ermita Santuario de la Virgen del Puerto,
+                disfrutando de las vistas de la ciudad.</li>
               <li>Kilómetro 30 a 35: Descender hacia el casco antiguo, pasando por la Catedral de Plasencia y el
                 Acueducto.
               </li>
