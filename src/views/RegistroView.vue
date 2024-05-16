@@ -20,11 +20,15 @@
         <div class="form-group">
           <label for="registerPassword">Contraseña</label>
           <input type="password" v-model="password" class="form-control" id="registerPassword" placeholder="Contraseña">
+          <div class="passIncorrecto d-none">La contraseña debe tener mínimo 6 caracteres.</div>
+
         </div>
         <div class="form-group">
           <label for="confirmPassword">Confirmar Contraseña</label>
           <input type="password" v-model="confirmPassword" class="form-control" id="confirmPassword"
             placeholder="Confirmar Contraseña">
+            <div class="repassIncorrecto d-none">Las contraseñas no son iguales.</div>
+
         </div>
         <div class="login">
           <small id="emailHelp" class="form-text text-muted">¿Ya tienes cuenta? <RouterLink to="/login">Inicia Sesión</RouterLink></small>
@@ -78,11 +82,11 @@ export default {
         return;
       }
       if (this.password.length < 6) {
-        alert('La contraseña debe tener al menos 6 caracteres');
+        document.querySelector('.passIncorrecto').classList.remove('d-none');
         return;
       }
       if (this.password !== this.confirmPassword) {
-        alert('Las contraseñas no coinciden.');
+        document.querySelector('.repassIncorrecto').classList.remove('d-none');
         return;
       }
       
