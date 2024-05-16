@@ -7,7 +7,7 @@
       </div>
 
       <div class="botones">
-        <p class="artMenores">
+        <div class="artMenores">
           <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample1"
             aria-expanded="false" aria-controls="multiCollapseExample1">Artículo 1</button>
           <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample2"
@@ -22,8 +22,8 @@
             aria-expanded="false" aria-controls="multiCollapseExample6">Artículo 6</button>
           <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample7"
             aria-expanded="false" aria-controls="multiCollapseExample7">Artículo 7</button>
-        </p>
-        <p class="artMayores">
+        </div>
+        <div class="artMayores">
           <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample8"
             aria-expanded="false" aria-controls="multiCollapseExample8">Artículo 8</button>
           <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample9"
@@ -38,7 +38,7 @@
             aria-expanded="false" aria-controls="multiCollapseExample13">Artículo 13</button>
           <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample14"
             aria-expanded="false" aria-controls="multiCollapseExample14">Artículo 14</button>
-        </p>
+        </div>
       </div>
 
       <div class="row reglamento">
