@@ -1,7 +1,7 @@
 <template>
     <div class="form-container">
       <form ref="registrarUsuario" class="formularioRegistro">
-        <div class="titulo">
+        <div class="titulo d-flex justify-content-center">
           <h2>Registrarse</h2>
         </div>
         <div class="form-group">

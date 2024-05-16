@@ -2,7 +2,7 @@
   <div class="form-container">
     <form class="formularioRegistro">
 
-      <div class="titulo">
+      <div class="titulo d-flex justify-content-center">
         <h2>Iniciar Sesión</h2>
       </div>
       <div class="form-group">
