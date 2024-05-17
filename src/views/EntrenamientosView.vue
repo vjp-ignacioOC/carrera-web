@@ -1,4 +1,5 @@
 <template>
+ 
   <div class="entrenamientos">
     <div id="list-info" class="list-group">
       <a class="list-group-item list-group-item-action" href="#list-item-1">Entrenamiento</a>
