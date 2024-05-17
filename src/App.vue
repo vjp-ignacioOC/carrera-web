@@ -15,7 +15,7 @@
             <RouterLink to="/" class="nav-link">Inicio</RouterLink>
           </li>
           <li class="nav-item">
-            <RouterLink to="/entrenamientos" class="nav-link">Información para Participantes</RouterLink>
+            <RouterLink to="/entrenamientos" class="nav-link">Información Básica para Participantes</RouterLink>
           </li>
           <li class="nav-item">
             <RouterLink to="/patrocinadores" class="nav-link">Patrocinadores</RouterLink>
