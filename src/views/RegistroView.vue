@@ -120,7 +120,6 @@ export default {
   align-items: center;
   justify-content: center;
   width: 100vw;
-  background-color: #f4f4f4;
   min-height: fit-content;
   padding: 0;
 }

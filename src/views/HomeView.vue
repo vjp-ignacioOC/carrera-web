@@ -326,6 +326,7 @@ export default {
 
 
 <style scoped>
+
 .logoEslogan {
   display: flex;
   text-align: center;
@@ -348,6 +349,7 @@ export default {
 .carousel-inner {
   margin-top: 20px;
 }
+
 
 
 /* Contenido principal */
@@ -395,7 +397,18 @@ p {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Media queries para ajustes en dispositivos más pequeños */
+@media screen and (max-width: 576px) {
+  .contenido {
+    padding: 5px;
+  }
+  .carousel img {
+    width: 100%;
+  }
+  #carouselExampleControls {
+    width: 100%;
+  }
+}
+
 @media (max-width: 768px) {
   .carousel-item img {
     height: 300px;
