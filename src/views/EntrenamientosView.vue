@@ -1,11 +1,4 @@
 <template>
-  <!--
-      https://www.runnersworld.com/es/training/a32795205/plan-entrenamiento-maraton-principiantes/ 
-
-      https://as.com/deporteyvida/2019/04/26/portada/1556276205_798313.html#:~:text=Qu%C3%A9%20se%20debe%20comer%20antes%20de%20correr%20una%20marat%C3%B3n&text=mantener%20la%20energ%C3%ADa.-,La%20mejor%20opci%C3%B3n%20es%20tomar%20alimentos%20ricos%20en%20carbohidratos%20y,el%20riesgo%20de%20problema%20estomacales. 
-
-      https://www.asics.com/es/es-es/running-advice/returning-to-training-after-your-marathon/#:~:text=Una%20buena%20forma%20de%20empezar,de%20correr%20sobre%20superficies%20duras. 
-    -->
   <div class="entrenamientos">
     <div id="list-info" class="list-group">
       <a class="list-group-item list-group-item-action" href="#list-item-1">Entrenamiento</a>
