@@ -11,7 +11,8 @@
       <div ref="perfil" class="row w-100">
         <!-- Muestra la foto de perfil del usuario -->
         <div class="col-md-12 p-0 text-center">
-          <img :src="imagenUrl" alt="Foto de perfil" class="fotoPerfil m-2">
+          <img :src="imagenUrl" alt="Foto de perfil" class="fotoPerfil m-2" v-if="imagenUrl">
+          <img src="./../assets/user_icono.png" alt="Foto de perfil" class="fotoPerfil m-2" v-else>
         </div>
         <!-- Muestra los datos del usuario logueado -->
         <div class="col-md-12 p-0 d-flex justify-content-center">
@@ -255,7 +256,7 @@ export default {
 .fotoPerfil {
   width: 100%;
   max-width: 200px;
-  height: auto;
+  height: 200px;
   border-radius: 50%;
   box-shadow: 15px 10px 5px rgba(0, 0, 0, 0.1);
 }
