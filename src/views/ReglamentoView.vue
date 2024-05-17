@@ -346,7 +346,7 @@ export default {
 </script>
 
 <style scoped>
-  /* Estilos generales */
+/* Estilos generales */
 
 .container {
   max-width: 1200px;

@@ -2,7 +2,8 @@
 
   <div>
     <nav class="navbar navbar-expand-lg navbar-light bg-grey">
-      <RouterLink to="/" class="navbar-brand">Corre Forr<span id="E">E</span><span id="X">X</span><span id="T">T</span></RouterLink>
+      <RouterLink to="/" class="navbar-brand">Corre Forr<span id="E">E</span><span id="X">X</span><span id="T">T</span>
+      </RouterLink>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -44,10 +45,18 @@
     <footer class="footer bg-grey mt-1">
       <div class="container">
         <ul class="foote_bottom_ul_amrc">
-          <li><RouterLink to="/">Inicio</RouterLink></li>
-          <li><RouterLink to="/entrenamientos">Información</RouterLink></li>
-          <li><RouterLink to="/patrocinadores">Patrocinadores</RouterLink></li>
-          <li><RouterLink to="/reglamento">Reglamento</RouterLink></li>
+          <li>
+            <RouterLink to="/">Inicio</RouterLink>
+          </li>
+          <li>
+            <RouterLink to="/entrenamientos">Información</RouterLink>
+          </li>
+          <li>
+            <RouterLink to="/patrocinadores">Patrocinadores</RouterLink>
+          </li>
+          <li>
+            <RouterLink to="/reglamento">Reglamento</RouterLink>
+          </li>
         </ul>
         <p class="text-center">
           Copyright &copy;2024 | Designed With by <a href="https://iesvallejertepla.educarex.es/" target="_blank"
@@ -56,7 +65,8 @@
 
         <ul class="social_footer_ul">
           <li>
-            <a href="https://www.facebook.com/IESValledelJertePlasencia" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.facebook.com/IESValledelJertePlasencia" target="_blank"><i
+                class="fab fa-facebook-f"></i></a>
           </li>
           <li>
             <a href="https://www.instagram.com/iesvallejpla/?hl=es" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -122,7 +132,8 @@ html {
   display: flex;
 }
 
-.miPerfil, .dropdown {
+.miPerfil,
+.dropdown {
   font-weight: bold;
   margin-left: auto;
   margin-right: 5%;
@@ -209,6 +220,7 @@ footer p {
 #X {
   color: white;
 }
+
 #T {
   color: black;
 }
@@ -219,10 +231,10 @@ footer p {
     flex-direction: column;
   }
 
-  .miPerfil, .dropdown {
+  .miPerfil,
+  .dropdown {
     margin-left: 0;
     margin-right: 0;
   }
 }
-
 </style>

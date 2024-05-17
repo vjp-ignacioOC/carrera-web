@@ -242,7 +242,8 @@
               <ul>
                 <li>Puestos de Hidratación: Disponibles cada 5 km con agua y bebidas isotónicas.</li>
                 <li>Puestos Médicos: Ubicados en puntos estratégicos cada 10 km y en la meta.</li>
-                <li>Animación: Punto de animación en la plaza mayor de Plasencia para los más pequeños organizada por los diferentes grupos scout de la ciudad.</li>
+                <li>Animación: Punto de animación en la plaza mayor de Plasencia para los más pequeños organizada por
+                  los diferentes grupos scout de la ciudad.</li>
               </ul>
             </div>
           </div>

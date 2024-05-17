@@ -210,7 +210,7 @@ export default {
         const img = new Image();
         const imgUrl = this.imagenUrl
         img.src = imgUrl;
-        if(!imgUrl) {
+        if (!imgUrl) {
           alert('Necesita subir una imagen de perfil para poder descargar el dorsal en PDF.');
           return;
         }

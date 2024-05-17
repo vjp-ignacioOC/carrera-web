@@ -15,7 +15,8 @@
         <input type="password" v-model="password" class="form-control" id="InputPassword" placeholder="Contraseña">
       </div>
       <div class="registro">
-        <small id="emailHelp" class="form-text text-muted">¿No tienes cuenta? <RouterLink to="/registro">Regístrate</RouterLink></small>
+        <small id="emailHelp" class="form-text text-muted">¿No tienes cuenta? <RouterLink to="/registro">Regístrate
+          </RouterLink></small>
       </div>
 
       <v-btn @click="iniciarSesion" class="btn btn-primary">Acceder</v-btn>
