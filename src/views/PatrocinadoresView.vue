@@ -167,7 +167,10 @@ h3 {
 /* Ajuste responsivo para dispositivos móviles */
 @media (max-width: 768px) {
     .patrocinador img {
+        width: 200px;
+        height: auto;
         max-width: 100%;
     }
+    
 }
 </style>
