@@ -399,6 +399,7 @@ p {
 
 @media screen and (max-width: 576px) {
   .contenido {
+    width: 100%;
     padding: 5px;
   }
   .carousel img {
@@ -431,7 +432,7 @@ p {
 }
 
 /* Media queries para ajustes en dispositivos más grandes */
-@media only screen and (min-width: 1500px) {
+@media screen and (min-width: 1500px) {
 
   .carousel-item img {
     height: 750px;
