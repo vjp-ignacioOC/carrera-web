@@ -119,7 +119,7 @@ html {
 
 .navbar {
   position: relative;
-  width: 100vw;
+  width: 100%;
 }
 
 .navbar-brand span {
@@ -130,6 +130,9 @@ html {
 .navbar-nav {
   width: 100%;
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
 }
 
 .miPerfil,
@@ -160,6 +163,7 @@ main {
 footer {
   width: 100vw;
   padding: 10px 0px 25px 0px;
+  text-align: center; 
 }
 
 

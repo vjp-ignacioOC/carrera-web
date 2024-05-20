@@ -15,21 +15,20 @@
         celebración de la diversidad y la superación personal.</p>
     </div>
     <!-- Carrusel -->
-    <!-- Imágenes donde me lleven a diferentes artículos -->
     <div class="container-fluid ">
       <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active ">
-            <img class="d-block" src="./../assets/imgCorredorPerspectiva.jpeg" alt="First slide" />
+            <img class="d-block w-100" src="./../assets/imgCorredorPerspectiva.jpeg" alt="First slide" />
           </div>
           <div class="carousel-item mt-5">
-            <img class="d-block" src="./../assets/imgAlexRoca.jpeg" alt="Second slide" />
+            <img class="d-block w-100" src="./../assets/imgAlexRoca.jpeg" alt="Second slide" />
           </div>
           <div class="carousel-item mt-5">
-            <img class="d-block" src="./../assets/imgDiversidad.jpeg" alt="Third slide" />
+            <img class="d-block w-100" src="./../assets/imgDiversidad.jpeg" alt="Third slide" />
           </div>
           <div class="carousel-item mt-5">
-            <img class="d-block" src="./../assets/imgMaraton.jpeg" alt="Four slide" />
+            <img class="d-block w-100" src="./../assets/imgMaraton.jpeg" alt="Four slide" />
           </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -335,7 +334,7 @@ export default {
 }
 
 .logoEslogan img {
-  width: 40%;
+  width: 80%;
   height: auto;
 }
 
@@ -351,11 +350,9 @@ export default {
 }
 
 
-
 /* Contenido principal */
 .contenido {
   background-color: lightgrey;
-  /* Fondo blanco para resaltar el contenido */
   border-radius: 8px;
   padding: 20px;
   margin: 15px;
@@ -363,9 +360,13 @@ export default {
   text-align: justify;
 }
 
+.accordion .card {
+  margin-bottom: 10px;
+}
+
 h2 {
   color: #0056b3;
-  text-align: justify;
+  text-align: center;
 }
 
 p {
@@ -389,7 +390,7 @@ p {
 
 
 .recorrido iframe {
-  width: 90%;
+  width: 100%;
   height: 450px;
   border: none;
   border-radius: 8px;
@@ -397,16 +398,41 @@ p {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-@media screen and (max-width: 576px) {
+.btn {
+  white-space: normal;
+}
+
+@media (max-width: 576px) {
+  .logoEslogan img {
+    width: 200px;
+  }
+
   .contenido {
-    width: 100%;
-    padding: 5px;
+    padding: 10px;
+    margin: 10px;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  .accordion .card {
+    margin: 5px;
   }
   .carousel img {
-    width: 100%;
+    height: 200px;
+    padding: 10px;
+    margin: 10px;
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
   }
+  
   #carouselExampleControls {
-    width: 100%;
+    height: 300px;
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: black;
   }
 }
 
