@@ -190,4 +190,41 @@ export default {
   font-size: 16px;
   color: #007bff;
 }
+
+@media (max-width: 576px) {
+  .entrenamientos {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  #list-info {
+    flex-direction: column;}
+
+  .scrollspy-example {
+    padding: 10px;
+    margin-top: 10px;
+  }
+
+  .list-group-item {
+    padding: 10px;
+  }
+
+  .scrollspy-example h4 {
+    font-size: 18px;
+  }
+
+  .scrollspy-example p {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .entrenamientos ul {
+    padding-left: 10px;
+  }
+
+  .fa-arrow-up {
+    font-size: 14px;
+  }
+}
 </style>
