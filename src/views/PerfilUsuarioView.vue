@@ -320,4 +320,39 @@ export default {
     margin-top: 10px;
   }
 }
+@media (max-width: 576px) {
+  .principal {
+    margin: 15px 0;
+  }
+
+  .fotoPerfil {
+    max-width: 150px;
+    height: 150px;
+  }
+
+  .datosUsuario {
+    align-items: center;
+    text-align: center;
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .datosUsuario p {
+    font-size: 1em;
+  }
+
+  .botones {
+    flex-direction: column;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .botones .btn {
+    margin: 10px 0;
+  }
+
+  .cambiarPassword {
+    margin-top: 10px;
+  }
+}
 </style>

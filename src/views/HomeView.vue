@@ -334,7 +334,7 @@ export default {
 }
 
 .logoEslogan img {
-  width: 80%;
+  width: 40%;
   height: auto;
 }
 
