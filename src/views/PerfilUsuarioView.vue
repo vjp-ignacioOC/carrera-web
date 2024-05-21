@@ -32,7 +32,7 @@
           <v-btn @click="subirFoto" class="btn btn-primary ml-4 mt-3">Subir Archivo</v-btn>
         </div>
         <div class="col-12 botones mt-5 d-flex flex-column flex-md-row justify-content-center align-items-center">
-          <v-btn @click="desconectarPerfil" class="btn btn-danger mb-3 mb-md-0 mr-md-4">Desconectar</v-btn>
+          <v-btn @click="desconectarPerfil" class="btn btn-danger mb-3 mb-md-0">Desconectar</v-btn>
           <v-btn @click="descargarPDF" class="btn btn-warning ml-md-4">Descargar Dorsal PDF</v-btn>
         </div>
       </div>
@@ -360,6 +360,7 @@ export default {
   .botones {
     height: auto;
     margin-top: 20px;
+    justify-content: center;
   }
 
   .botones .btn {

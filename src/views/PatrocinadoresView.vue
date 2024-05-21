@@ -171,10 +171,16 @@ h3 {
         margin: 15px auto;
     }
     .patrocinador img {
-        width: 200px;
+        width: 250px;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .patrocinador img {
+        width: 250px;
         height: auto;
         max-width: 100%;
     }
-    
 }
 </style>
