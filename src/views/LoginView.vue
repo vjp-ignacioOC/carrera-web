@@ -123,4 +123,12 @@ input[type="password"] {
 .btn:hover {
   background-color: #0056b3;
 }
+
+@media (max-width: 768px) {
+  .form-container {
+    width: 90%;
+    margin: 0;
+  }
+}
+
 </style>
