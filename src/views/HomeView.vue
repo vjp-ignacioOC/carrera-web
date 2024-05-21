@@ -5,7 +5,7 @@
       <img src="./../assets/corre-forrext-logo.png" alt="logoEslogan">
     </div>
 
-    <div class="contenido mb-5 px-5">
+    <div class="contenido px-5">
 
       <h2>¡Bienvenidos a Corre Forr<span id="E">E</span><span id="X">X</span><span id="T">T</span>!</h2>
       <p>Un evento deportivo único que celebra la diversidad y la superación personal en un entorno festivo y
@@ -346,7 +346,8 @@ export default {
 }
 
 .carousel-inner {
-  margin-top: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 
