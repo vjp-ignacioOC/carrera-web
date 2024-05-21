@@ -407,6 +407,11 @@ p {
     width: 200px;
   }
 
+  .container-fluid {
+    padding: 0;
+    margin: 5px auto 25px auto;
+  }
+
   .contenido {
     padding: 10px;
     margin: 10px;
@@ -414,9 +419,11 @@ p {
     margin-left: auto;
     margin-right: auto
   }
+
   .accordion .card {
     margin: 5px;
   }
+  
   .carousel img {
     height: 200px;
     padding: 10px;

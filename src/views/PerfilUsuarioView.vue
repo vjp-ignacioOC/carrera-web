@@ -1,7 +1,7 @@
 <!-- HTML de la vista -->
 <template>
 
-  <div>
+  
     <div class="container principal">
       <div class="row">
         <div class="col-12">
@@ -24,16 +24,16 @@
         </div>
       </div>
       <div class="row w-100 mt-5">
-        <div class="col-md-12 d-flex justify-content-center">
+        <div class="col-12 d-flex justify-content-center">
           <h3 class="mr-2">¿Quiere subir una imagen de perfil? </h3>
         </div>
-        <div class="col-md-12 d-flex justify-content-center mb-5 mt-5">
-          <input type="file" @change="seleccionarFoto" id="fileInput" class="mr-4">
-          <v-btn @click="subirFoto" class="btn btn-primary ml-4">Subir Archivo</v-btn>
+        <div class="col-12 d-flex flex-column flex-md-row justify-content-center align-items-center mb-5 mt-5">
+          <input type="file" @change="seleccionarFoto" id="fileInput" class="input-file mr-4 mb-3">
+          <v-btn @click="subirFoto" class="btn btn-primary ml-4 mt-3">Subir Archivo</v-btn>
         </div>
-        <div class="col-md-12 botones mt-5">
-          <v-btn @click="desconectarPerfil" class="btn btn-danger">Desconectar</v-btn>
-          <v-btn @click="descargarPDF" class="btn btn-warning">Descargar Dorsal PDF</v-btn>
+        <div class="col-12 botones mt-5 d-flex flex-column flex-md-row justify-content-center align-items-center">
+          <v-btn @click="desconectarPerfil" class="btn btn-danger mb-3 mb-md-0 mr-md-4">Desconectar</v-btn>
+          <v-btn @click="descargarPDF" class="btn btn-warning ml-md-4">Descargar Dorsal PDF</v-btn>
         </div>
       </div>
       <div class="row w-100">
@@ -44,7 +44,7 @@
         </div>
       </div>
     </div>
-  </div>
+  
 
 </template>
 
@@ -309,20 +309,12 @@ export default {
   text-decoration: underline;
 }
 
-
-@media (max-width: 768px) {
-  .botones {
-    justify-content: flex-start;
-    margin-top: 10px;
-  }
-
-  .cambiarContraseña {
-    margin-top: 10px;
-  }
-}
 @media (max-width: 576px) {
   .principal {
-    margin: 15px 0;
+    text-align: center;
+    margin: 15px auto;
+    width: 90%;
+    height: auto;
   }
 
   .fotoPerfil {
@@ -333,7 +325,6 @@ export default {
   .datosUsuario {
     align-items: center;
     text-align: center;
-    margin-left: 0;
     margin-top: 20px;
   }
 
@@ -354,5 +345,32 @@ export default {
   .cambiarPassword {
     margin-top: 10px;
   }
+
+  .input-file {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
 }
+
+
+@media (max-width: 768px) {
+  
+  .botones {
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .botones .btn {
+    margin: 10px 0;
+  }
+
+  .cambiarPassword {
+    margin-top: 10px;
+  }
+
+ 
+}
+
 </style>
