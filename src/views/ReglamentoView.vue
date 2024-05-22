@@ -104,8 +104,7 @@
           <div class="collapse multi-collapse" id="multiCollapseExample4">
             <div class="card card-body">
               <h2>Artículo 4: Cambios de Titular</h2>
-              <p>Los dorsales son personales e intransferibles. En el caso que se desee cambiar el titular se deberá
-                volver a inscribir desde la página web.</p>
+              <p>Los dorsales son personales e intransferibles. A parte del dorsal descargado en la página web, la propia organización proveerá del número de dorsal asignado para evitar falsificaciones. En el caso que se desee cambiar el titular se deberá volver a inscribir desde la página web.</p>
             </div>
           </div>
         </div>
@@ -120,13 +119,13 @@
                 Atletismo (R.F.E.A.) y dispone de un certificado WA (World Athletics).
               </p>
               <p>
-                El circuito NO estará completamente cerrado al tráfi­co, habrá tramos en los que podrán pasar vehículos.
+                El circuito NO estará completamente cerrado al tráfico, habrá tramos en los que podrán pasar vehículos.
                 En esos tramos habrá puestos designados para avisar del peligro. La Policía Municipal podrá sancionar de
                 forma expresa a los vehículos y bicicletas que incumplan con las restricciones en dichos tramos.
               </p>
               <p>
                 En el caso de las handbikes se determina que, todas ellas sin excepción, deberán ir acompañadas de una
-                bicicleta convencional, quien les prestará asistencia de cara a los posibles alcances con los
+                bicicleta convencional o corredor, quien les prestará asistencia de cara a los posibles alcances con los
                 participantes a pie y con los puntos de especial atención en el recorrido. No será posible la
                 participación de estas si no se cumple lo indicado en este punto.
               </p>
@@ -236,12 +235,12 @@
                 Serán motivos de descalificación:
               </p>
               <ul>
-                <li>No llevar el dorsal y chip en la parte delantera de la camiseta.</li>
+                <li>No llevar ninguno de los dorsales y chip en la parte delantera de la camiseta.</li>
                 <li>No realizar el recorrido completo.</li>
                 <li>No pasar por los controles de paso establecidos.</li>
                 <li>No seguir las indicaciones de la organización.</li>
                 <li>No haber pasa el control anti-doping (en caso de haberlo hecho).</li>
-                <li>No portar el dorsal visible en algún punto de la carrera.</li>
+                <li>No portar alguno de los dorsales visibles en algún punto de la carrera.</li>
               </ul>
               <p>
                 Dado el grave perjuicio que ocasiona a la Organización y a los demás corredores de la prueba incurrir en
