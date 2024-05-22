@@ -21,13 +21,13 @@
           <div class="carousel-item active ">
             <img class="d-block w-100" src="./../assets/imgCorredorPerspectiva.jpeg" alt="First slide" />
           </div>
-          <div class="carousel-item mt-5">
+          <div class="carousel-item">
             <img class="d-block w-100" src="./../assets/imgAlexRoca.jpeg" alt="Second slide" />
           </div>
-          <div class="carousel-item mt-5">
+          <div class="carousel-item">
             <img class="d-block w-100" src="./../assets/imgDiversidad.jpeg" alt="Third slide" />
           </div>
-          <div class="carousel-item mt-5">
+          <div class="carousel-item">
             <img class="d-block w-100" src="./../assets/imgMaraton.jpeg" alt="Four slide" />
           </div>
         </div>
