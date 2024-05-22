@@ -114,7 +114,7 @@ export default ({
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    margin: 15px 0 15px 0;
+    margin: 15px 20px 15px 20px;
 }
 
 .patrocinadores h3 {
@@ -166,11 +166,21 @@ h3 {
 
 /* Ajuste responsivo para dispositivos móviles */
 @media (max-width: 768px) {
+    .patrocinadores {
+        width: 90%;
+        margin: 15px auto;
+    }
     .patrocinador img {
-        width: 200px;
+        width: 250px;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .patrocinador img {
+        width: 250px;
         height: auto;
         max-width: 100%;
     }
-    
 }
 </style>

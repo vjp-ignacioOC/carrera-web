@@ -1,6 +1,6 @@
 [
     {
-      "origin": ["https://vjp-ignaciooc.github.io"],
+      "origin": ["https://vjp-ignaciooc.github.io", "http://localhost:8080/"],
       "method": ["GET", "HEAD", "POST", "PUT"],
       "maxAgeSeconds": 3600,
       "responseHeader": ["Content-Type"]

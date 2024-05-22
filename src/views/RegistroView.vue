@@ -191,4 +191,11 @@ button:focus {
   font-size: 0.875rem;
   margin-top: 0.25rem;
 }
+
+@media (max-width: 768px) {
+  .form-container {
+    width: 90%;
+    margin: 0;
+  }
+}
 </style>

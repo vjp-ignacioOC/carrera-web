@@ -1,5 +1,5 @@
 <template>
-  <div>
+  
     <div class="contenido">
 
       <div class="titulo d-flex justify-content-center">
@@ -290,7 +290,7 @@
       </div>
 
     </div>
-  </div>
+  
 </template>
 
 <script>
@@ -300,16 +300,11 @@ export default {
   },
   methods: {
     gestionarAperturaArticulo() {
-      // Obtener todos los botones de los artículos
       const botonesArticulos = document.querySelectorAll('.botones button');
 
-      // Iterar sobre los botones y agregar un event listener para cada uno
       botonesArticulos.forEach((boton) => {
         boton.addEventListener('click', function () {
-          // Obtener el atributo data-target del botón para identificar el artículo correspondiente
           const targetId = boton.getAttribute('data-target');
-
-          // Obtener todos los elementos con la clase collapse que estén abiertos
           const articulosAbiertos = document.querySelectorAll('.collapse.show');
 
           // Iterar sobre los artículos abiertos y cerrarlos
@@ -319,18 +314,15 @@ export default {
               // Cerrar el artículo actual
               articulo.classList.remove('show');
             }
-          });
+          });          
         });
       });
     },
 
     cerrarTodosLosArticulos() {
-      // Obtener todos los elementos con la clase collapse que estén abiertos
+      // Obtener todos los elementos con la clase collapse que estén abiertos y cerrarlos
       const articulosAbiertos = document.querySelectorAll('.collapse.show');
-
-      // Iterar sobre los artículos abiertos y cerrarlos
       articulosAbiertos.forEach((articulo) => {
-        // Cerrar el artículo actual
         articulo.classList.remove('show');
       });
     }
@@ -348,10 +340,10 @@ export default {
 <style scoped>
 /* Estilos generales */
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+.contenido {
+  width: 90%;
+  margin: 15px auto;
+  text-align: justify;
 }
 
 /* Estilos para los botones */

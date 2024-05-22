@@ -122,6 +122,11 @@ html {
   width: 100%;
 }
 
+.navbar-brand {
+  font-size: 1.5rem;
+  margin-left: 15px;
+}
+
 .navbar-brand span {
   font-weight: bold;
 }
@@ -161,7 +166,7 @@ main {
 }
 
 footer {
-  width: 100vw;
+  width: 100%;
   padding: 10px 0px 25px 0px;
   text-align: center; 
 }
@@ -189,6 +194,7 @@ footer p {
 .foote_bottom_ul_amrc li a {
   color: black;
   margin: 0 12px;
+  text-decoration: none;
 }
 
 .social_footer_ul {
@@ -233,6 +239,8 @@ footer p {
   .navbar-nav {
     display: flex;
     flex-direction: column;
+    margin: 5px;
+    padding: 0;
   }
 
   .miPerfil,
