@@ -19,7 +19,7 @@
       <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active ">
-            <img class="d-block w-100" src="./../assets/imgCorredorPerspectiva.jpeg" alt="First slide" />
+            <img class="d-block w-100" src="./../assets/plasencia-deporte.jpg" alt="First slide" />
           </div>
           <div class="carousel-item">
             <img class="d-block w-100" src="./../assets/imgAlexRoca.jpeg" alt="Second slide" />
@@ -29,6 +29,15 @@
           </div>
           <div class="carousel-item">
             <img class="d-block w-100" src="./../assets/imgMaraton.jpeg" alt="Four slide" />
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="./../assets/imgMaratonCatedral.jpg" alt="Five slide" />
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="./../assets/imgMaratonSalidaPlasenica.jpg" alt="Six slide" />
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="./../assets/imgCorredorPerspectiva.jpeg" alt="Seven slide" />
           </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -343,6 +352,10 @@ export default {
   width: 100%;
   height: 500px;
   object-fit: cover;
+}
+
+.carousel-item:nth-of-type(1) img  {
+  object-fit: contain;
 }
 
 .carousel-inner {
