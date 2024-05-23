@@ -6,8 +6,8 @@
       </div>
       <div class="form-group">
         <label for="registerEmail">Email</label>
-        <input type="email" v-model="email" class="form-control" id="registerEmail" placeholder="Email">
-        <div class="emailIncorrecto d-none">Email incorrecto.</div>
+        <input type="email" v-model="email" @input="validateEmail" class="form-control" id="registerEmail" placeholder="Email">
+        <div v-if="emailError" class="emailIncorrecto">Email incorrecto.</div>
       </div>
       <div class="form-group">
         <label for="registerNombre">Nombre</label>
@@ -19,15 +19,15 @@
       </div>
       <div class="form-group">
         <label for="registerPassword">Contraseña</label>
-        <input type="password" v-model="password" class="form-control" id="registerPassword" placeholder="Contraseña">
-        <div class="passIncorrecto d-none">La contraseña debe tener mínimo 6 caracteres.</div>
+        <input type="password" v-model="password" @input="validatePassword" class="form-control" id="registerPassword" placeholder="Contraseña">
+        <div v-if="passwordError" class="passIncorrecto">La contraseña debe tener mínimo 6 caracteres.</div>
 
       </div>
       <div class="form-group">
         <label for="confirmPassword">Confirmar Contraseña</label>
-        <input type="password" v-model="confirmPassword" class="form-control" id="confirmPassword"
+        <input type="password" v-model="confirmPassword" @input="validateConfirmPassword" class="form-control" id="confirmPassword"
           placeholder="Confirmar Contraseña">
-        <div class="repassIncorrecto d-none">Las contraseñas no son iguales.</div>
+        <div v-if="confirmPasswordError" class="repassIncorrecto">Las contraseñas no son iguales.</div>
 
       </div>
       <div class="login">
@@ -65,6 +65,9 @@ export default {
       password: '',
       confirmPassword: '',
       imageUrl: '',
+      emailError: false,
+      passwordError: false,
+      confirmPasswordError: false,
     };
   },
   computed: {
@@ -73,21 +76,39 @@ export default {
     },
   },
   methods: {
+    validateEmail() {
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      this.emailError = this.email !== '' && !emailPattern.test(this.email);    
+    },
+    validatePassword() {
+      this.passwordError = this.password !== '' && this.password.length < 6;
+    },
+    validateConfirmPassword() {
+      this.confirmPasswordError = this.confirmPassword !== '' && this.password !== this.confirmPassword;
+    },
     async crearUsuario() {
+
+      this.validateEmail();
+      this.validatePassword();
+      this.validateConfirmPassword();
+
       if (!this.email || !this.password || !this.confirmPassword || !this.nombre || !this.apellidos) {
         alert('Debes rellenar todos los campos.');
         return;
       }
-      if (!this.email.includes('@')) {
-        document.querySelector('.emailIncorrecto').classList.remove('d-none');
-        return;
-      }
-      if (this.password.length < 6) {
-        document.querySelector('.passIncorrecto').classList.remove('d-none');
-        return;
-      }
-      if (this.password !== this.confirmPassword) {
-        document.querySelector('.repassIncorrecto').classList.remove('d-none');
+      // if (!this.email.includes('@')) {
+      //   document.querySelector('.emailIncorrecto').classList.remove('d-none');
+      //   return;
+      // }
+      // if (this.password.length < 6) {
+      //   document.querySelector('.passIncorrecto').classList.remove('d-none');
+      //   return;
+      // }
+      // if (this.password !== this.confirmPassword) {
+      //   document.querySelector('.repassIncorrecto').classList.remove('d-none');
+      //   return;
+      // }
+      if (this.emailError || this.passwordError || this.confirmPasswordError) {
         return;
       }
 
@@ -106,8 +127,8 @@ export default {
         this.$router.push('/');
         this.contadorDorsal++;
       } catch (error) {
-        console.error('Error al crear el usuario:', error);
-        alert(`Error al crear el usuario: ${error.message}`);
+        alert('Error al crear el usuario. Por favor, compruebe que todos los campos son correctos y que el Email no está siendo utilizado.');
+        console.error(`Error al crear el usuario: ${error.message}`, error);
       }
     },
   },
