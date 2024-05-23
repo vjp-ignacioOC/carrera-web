@@ -96,18 +96,7 @@ export default {
         alert('Debes rellenar todos los campos.');
         return;
       }
-      // if (!this.email.includes('@')) {
-      //   document.querySelector('.emailIncorrecto').classList.remove('d-none');
-      //   return;
-      // }
-      // if (this.password.length < 6) {
-      //   document.querySelector('.passIncorrecto').classList.remove('d-none');
-      //   return;
-      // }
-      // if (this.password !== this.confirmPassword) {
-      //   document.querySelector('.repassIncorrecto').classList.remove('d-none');
-      //   return;
-      // }
+
       if (this.emailError || this.passwordError || this.confirmPasswordError) {
         return;
       }
