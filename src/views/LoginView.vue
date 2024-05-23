@@ -13,6 +13,7 @@
       <div class="form-group">
         <label for="InputPassword">Contraseña</label>
         <input type="password" v-model="password" class="form-control" id="InputPassword" placeholder="Contraseña">
+        <div class="userIncorrecto d-none">El usuario o la contraseña son incorrectos.</div>
       </div>
       <div class="registro">
         <small id="emailHelp" class="form-text text-muted">¿No tienes cuenta? <RouterLink to="/registro">Regístrate
@@ -60,7 +61,7 @@ export default {
         .catch((error) => {
           console.log('Intentando iniciar sesión con:', this.email, this.password);
           console.error('Error en la autenticación:', error);
-          alert('Usuario o contraseña incorrectos ' + error.code + ' ' + error.message);
+          docuemnt.querySelector('.userIncorrecto').classList.remove('d-none');
         });
 
     },
@@ -122,6 +123,12 @@ input[type="password"] {
 
 .btn:hover {
   background-color: #0056b3;
+}
+
+.userIncorrecto {
+  color: red;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
 }
 
 @media (max-width: 768px) {
