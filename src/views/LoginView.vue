@@ -61,7 +61,7 @@ export default {
         .catch((error) => {
           console.log('Intentando iniciar sesión con:', this.email, this.password);
           console.error('Error en la autenticación:', error);
-          docuemnt.querySelector('.userIncorrecto').classList.remove('d-none');
+          document.querySelector('.userIncorrecto').classList.remove('d-none');
         });
 
     },

@@ -466,7 +466,7 @@ p {
 }
 
 /* Media queries para ajustes en dispositivos más grandes */
-@media screen and (min-width: 1500px) {
+@media screen and (min-width: 1443px) {
 
   .carousel-item img {
     height: 750px;
